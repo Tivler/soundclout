@@ -55,8 +55,8 @@ class Grid extends React.Component {
 
             <div className="filter">
                 <h3 className="filter__title">Filter Albums By Price:</h3>
-                <button onClick={this._filterByLowest} className="filter__button">Low To High</button>
-                <button onClick={this._filterByHighest}className="filter__button filter__button--divider">High To Low</button>
+                <button onClick={this._filterByLowest} className="filter__button filter__button--divider">Low To High</button>
+                <button onClick={this._filterByHighest}className="filter__button">High To Low</button>
             </div>
         </div>
         </>
