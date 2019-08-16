@@ -1,0 +1,207 @@
+@mixin color {
+    background: #f50;
+    background: linear-gradient(#f70,#f30);
+}
+
+.contact {
+    text-align: center;
+    margin-top: 5%;
+    font-family: 'Montserrat' , sans-serif;
+
+    @media only screen and (max-width: 1450px) {
+        margin-top: 4%;
+    }
+
+
+    @media only screen and (max-width: 525px) {
+        margin: 15% 0% 0% 0;
+    }
+
+    &__title {
+        color: #000;
+        font-size: 3em;
+        letter-spacing: -2px;
+        font-weight: 700;
+        margin-bottom: 1%;
+
+        @media only screen and (max-width: 1100px) {
+            font-size: 2.7em;
+        }
+
+        @media only screen and (max-width: 965px) {
+            font-size: 2.4em;
+        }
+
+        @media only screen and (max-width: 750px) {
+            font-size: 2.2em;
+        }
+    }
+
+    &__description {
+        color: #F50;
+        margin-bottom: 3%;
+        font-weight: 600;
+
+        @media only screen and (max-width: 5250px) {
+            font-size: 19px;
+          }
+    }
+}
+
+.form__wrapper {
+    display: flex;
+    justify-content: center;
+    z-index: 9999;
+
+    @media only screen and (min-width: 2600px) {
+        margin-top: 3%;
+    }
+
+    @media only screen and (max-width: 1450px) {
+        margin-top: 0;
+    }
+
+
+    @media only screen and (max-width: 525px) {
+        margin: 15% 0% 0% 0;
+    }
+
+ }
+ 
+ .form {
+     display: flex;
+     flex-direction: column;
+     text-align: center;
+     padding: 50px 100px 100px 100px;
+     justify-content: center;
+     border-radius: 7px;
+     width: 24em;
+     background: #333;
+     font-family: 'Montserrat' , sans-serif;
+     margin-bottom: 5%;
+     box-shadow: 0 2px 0 rgba(0,0,0,0.1);
+     z-index: 9;
+      
+    @media only screen and (max-width: 1440px) and (max-height: 1400px) {   
+        margin: 2% 0 8% 0;
+        width: 22em;
+    }
+
+    @media only screen and (max-width: 750px) {
+        width: 30em;
+        padding: 80px 80px 90px 80px;         
+    }
+
+    @media only screen and (max-width: 700px) {
+        width: 25em;
+        padding: 65px 65px 75px 65px;          
+    }
+
+    @media only screen and (max-width: 570px) {
+        width: 20em;
+        padding: 65px 65px 75px 65px;              
+    }
+
+    @media only screen and (max-width: 480px) {
+        width: 16em;
+        padding: 55px 55px 65px 55px;            
+    }
+    
+
+    &__title {
+        text-transform: uppercase;
+        font-family: 'Montserrat' , sans-serif;
+        font-weight: 700;
+        font-size: 1.5em;
+        line-height: 1.5;
+        color: #fff;
+        margin-top: 2px;
+
+         
+        @media only screen and (max-width: 1440px) and (max-height: 1400px) {   
+            font-size: 1.5em;
+        }
+    }
+
+    &--control {
+        position: relative;
+        height: auto;
+        padding: 20px 15px;
+        font-size: 15px;
+        background-color: #f9f9f7;
+        border: 1px solid #c7c7c7;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &--button {
+        width: 100%;
+        margin: 0 auto;
+        color: #fff;
+        font-size: 14px;
+        padding: 28px 40px 25px;
+        transition: .3s;
+        text-align: center;
+        border-radius: 3px;
+        border: none;
+        text-transform: uppercase;
+        cursor: pointer;
+        @include color();
+
+        &:hover {
+            border: 1px solid #f50;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__copyright {
+        margin-top: 40px;
+        font-size: 65%;
+        color: #fff;
+    }
+ }
+ 
+#inputFirstName {
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+ 
+#inputLastName {
+    margin-bottom: 15px;
+}
+ 
+
+#inputEmail {
+    margin-bottom: 25px;
+}
+ 
+#inputMessage {
+     margin-bottom: 35px;
+     font-size: 13px;
+     resize: none;
+}
+
+.error {
+    font-family: 'Montserrat' , sans-serif;
+    color: #F50;
+    font-size: 16px;
+    margin-bottom: 15px;
+    display: none;
+}
+
+.firstNameError {
+    display: none;
+}
+
+.lastNameError {
+    display: none;
+}
+
+.emailError {
+    display: none;
+}

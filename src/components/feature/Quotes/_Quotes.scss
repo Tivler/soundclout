@@ -1,0 +1,68 @@
+@mixin color {
+    background: #f50;
+    background: linear-gradient(#f70,#f30);
+}
+
+.quote {
+    text-align: center;
+    font-family: 'Montserrat' , sans-serif;
+
+    &--wrapper {
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 5% 25%;
+        margin-top: 40px;
+        @include color();
+
+        @media only screen and (max-width: 915px) {
+            padding: 5% 25%;
+         }
+
+         @media only screen and (max-width: 600px) {
+            margin-top: 0;
+            padding: 7% 25%;
+         }
+    }
+
+    &__title {
+        font-size: 1.8em;
+        font-weight: 700;
+        margin-bottom: 4%;      
+
+        @media only screen and (max-width: 1440px) and (max-height: 1400px) {
+            font-size: 1.5em;  
+        }
+
+        @media only screen and (max-width: 475px) {
+            font-size: 1.4em;
+        }
+
+        @media only screen and (max-width: 325px) {
+            font-size: 1em;
+        }
+    }
+
+    &__content {
+        font-size: .75em;
+        margin-bottom: 4%;      
+    }
+
+    &__author {
+        font-size: .8em;
+        font-weight: 700; 
+        margin-bottom: 2px;    
+
+        &--title {
+            font-size: .7em;
+
+            &--label {
+                color: #fff;
+                font-weight: 700;
+            }
+        }
+    }
+
+    
+}

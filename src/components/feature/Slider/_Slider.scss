@@ -1,0 +1,208 @@
+$image-overlay: linear-gradient(rgba(0, 0, 0, 0.25));
+
+@mixin slider-image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@mixin color {
+  background: #f50;
+  background: linear-gradient(#f70,#f30);
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+
+    &--wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.4s ease-in-out;
+
+      &:first-child {
+          background: url(/images/image1.jpg);
+          height: 100vh;
+          width: 100%;
+          @include slider-image();
+
+          &:before {
+            content: '';
+            display: block;
+            background-color: #000;
+            height: 100%;
+            left: 0;
+            opacity: 0.45;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+          }
+      }
+
+      &:nth-child(2) {
+        background: url(/images/image2.jpg);
+        height: 100vh;
+        width: 100%;
+        @include slider-image();
+
+        &:before {
+          content: '';
+          display: block;
+          background-color: #000;
+          height: 100%;
+          left: 0;
+          opacity: 0.45;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          z-index: 1;
+        }
+      }
+
+      &:last-child {
+        background: url(/images/image3.jpg);
+        height: 100vh;
+        width: 100%;
+        @include slider-image();
+
+        &:before {
+          content: '';
+          display: block;
+          background-color: #000;
+          height: 100%;
+          left: 0;
+          opacity: 0.15;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          z-index: 1;
+        }
+      }
+    }
+
+    &__header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      height: 100vh;
+      width: 100%;
+      text-align: center;
+      font-family: 'Montserrat' , sans-serif;
+      z-index: 4;
+  
+        &__title {
+            color: #fff;
+            font-size: 3.5em;
+            letter-spacing: -2px;
+            font-weight: 700;
+            margin-bottom: 1%;
+
+            @media only screen and (max-width: 1075px) {
+              font-size: 2.75em;
+            }
+
+            @media only screen and (max-width: 550px) {
+              font-size: 2.15em;
+              margin-bottom: 3%;
+            }
+
+            @media only screen and (max-width: 300px) {
+              font-size: 2em;
+            }
+        }
+    
+        &__subtitle {
+            color: #fff;
+            margin-bottom: 2%;
+            font-size: 16px;
+            font-weight: 600;
+
+            @media only screen and (max-width: 550px) {
+              margin-bottom: 3%;
+            }
+
+            @media only screen and (max-width: 300px) {
+              font-size: 14px;
+            }
+        }
+    
+        &__button {
+            color: #fff;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: 600;
+            text-decoration: none;
+            @include color();
+            padding:16px 48px 18px;
+            border-radius: 500px;
+            width: fit-content;
+            align-self: center;
+            transition: .3s;
+            z-index: 4;
+    
+            &:hover {
+                background-color: #1ED760;
+            }
+        }
+    }
+
+    &__arrows {
+      &--wrapper {
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        position: absolute;
+        left: 50%;
+        top: 47%;
+        transform: translate(-50%, -50%);
+        width: 1170px;
+        z-index: 5;
+
+        @media only screen and (max-width: 1300px) {
+          width: 1000px;
+        }
+
+        @media only screen and (max-width: 1075px) {
+          width: 800px;
+        }
+
+        @media only screen and (max-width: 950px) {
+          display: none;
+        }
+      }
+
+      &--mod {
+        border: 2px solid #fff;
+        background-color: transparent;
+        color: #fff;
+        cursor: pointer;
+        padding: 13px 15px;
+        border-radius: 50%;
+        outline: none;
+        z-index: 3;
+
+        &:hover {
+          background-color: #fff;
+          color: #333;
+        }
+      }
+    }
+}
+  
+.slider--wrapper {
+  opacity: 0;
+
+  &--current {
+    opacity: 1;
+  }
+}

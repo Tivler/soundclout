@@ -1,0 +1,338 @@
+@mixin album-image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.album {
+    margin: 5% 17% 7%;   
+    text-align: center;
+    font-family: 'Montserrat' , sans-serif;
+
+
+    @media only screen and (max-width: 1450px) {
+        margin-top: 5%;
+    }
+
+
+    @media only screen and (max-width: 525px) {
+        margin: 15% 0% 0% 0;
+    }
+
+    &__title {
+        color: #000;
+        font-size: 3em;
+        letter-spacing: -2px;
+        font-weight: 700;
+        margin-bottom: 1%;
+
+        @media only screen and (max-width: 1100px) {
+            font-size: 2.7em;
+        }
+
+        @media only screen and (max-width: 965px) {
+            font-size: 2.4em;
+        }
+
+        @media only screen and (max-width: 750px) {
+            font-size: 2.2em;
+        }
+    }
+
+    &__description {
+        color: #F40;
+        margin-bottom: 5%;
+        font-size: 20px;
+        font-weight: 600;
+
+        @media only screen and (max-width: 5250px) {
+            font-size: 19px;
+          }
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 350px 350px 350px;
+        grid-gap: 1.5em;
+        justify-content: center;
+        margin-top: 7%;
+        margin-bottom: 7%;
+
+        @media only screen and (max-width: 1400px) {
+            grid-template-columns: 350px 350px;
+        }
+
+        @media only screen and (max-width: 950px) {
+            grid-template-columns: 600px;
+        }
+
+        @media only screen and (max-width: 700px) {
+            grid-template-columns: 500px;
+        }
+
+        @media only screen and (max-width: 500px) {
+            grid-template-columns: 375px;
+        }
+
+        @media only screen and (max-width: 500px) {
+            grid-template-columns: 300px;
+        }
+
+        &--link {
+            height: 350px;
+            width: inherit;
+            min-width: 350px;
+            box-shadow: -2px 2px 40px 0 rgba(0, 0, 0, 0.18);
+            border-radius: 3px;
+            transition: .2s ease-in-out;
+            color: #fff;
+            text-decoration: none;
+
+            @media only screen and (min-width: 2000px) {
+                max-width: 450px;
+            }
+
+            @media only screen and (min-width: 950px) {
+                min-width: 300px;
+                max-width: 600px;
+            }
+
+            @media only screen and (max-width: 500px) {
+                min-width: 300px;
+            }
+
+            @media only screen and (max-width: 400px) {
+                min-width: 250px;
+            }
+
+            &:hover {
+                transform: scale(1.02);
+                transition: .2s ease-in-out;
+
+                @media only screen and (max-width: 1330px) {
+                    transform: none;
+                    transition: none;
+                }
+            }
+        }
+
+        &--overlay {
+            display: none;
+            color: #fff;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 50%);
+
+            @media only screen and (max-width: 1330px) {    
+                display: block;
+                display: flex;
+                flex-direction: column;
+                height: inherit;
+                text-align: center;
+                justify-content: center;
+            }
+        }
+
+        &__heading {
+            font-size: 1.1em;
+            padding: 40px 40px 0;
+            align-self: center;
+            margin-bottom: 0.438em;
+
+            @media only screen and (max-width: 1440px) and (max-height: 1400px) {
+                font-size: 1em;
+            }
+
+            @media only screen and (max-width: 1330px) {  
+                text-align: center;
+            }
+
+            @media only screen and (max-width: 900px) {
+                font-size: 1em;
+            }
+
+            @media only screen and (max-width: 630px) {
+                font-size: .9em;
+            }
+
+
+            @media only screen and (max-width: 350px) {
+                font-size: .8em;
+            }
+            
+            @media only screen and (max-width: 280px) {
+                font-size: .9em;
+            }
+        }
+
+        &__description {
+            font-size: .9em;
+            text-align: left;
+            align-self :center;
+            margin-bottom: 20px;
+
+            @media only screen and (max-width: 1440px) and (max-height: 1400px) {
+                font-size: .8em;
+            }
+
+            @media only screen and (max-width: 1330px) {
+                text-shadow: -2px 2px 2px #999;
+            }
+
+            @media only screen and (max-width: 900px) {
+                font-size: 1em;
+            }
+
+            @media only screen and (max-width: 630px) {
+                font-size: .8em;
+            }
+
+
+            @media only screen and (max-width: 350px) {
+                font-size: .75em;
+            }
+
+            @media only screen and (max-width: 280px) {
+                font-size: .65em;
+            }
+            
+        }
+
+    }
+}
+
+.one {
+    background: url(/images/albums/1.png);
+    @include album-image();
+}
+
+.two {
+    background: url(/images/albums/2.jpg);
+    @include album-image();
+}
+
+.three {
+    background: url(/images/albums/3.jpg);
+    @include album-image();
+}
+
+.four {
+    background: url(/images/albums/4.jpg);
+    @include album-image();
+}
+
+.five {
+    background: url(/images/albums/5.jpg);
+    @include album-image();
+}
+
+.six {
+    background: url(/images/albums/6.jpg);
+    @include album-image();
+}
+
+.seven {
+    background: url(/images/albums/7.jpg);
+    @include album-image();
+}
+
+.eight {
+    background: url(/images/albums/8.jpg);
+    @include album-image();
+}
+
+.nine {
+    background: url(/images/albums/9.jpg);
+    @include album-image();
+}
+
+.ten {
+    background: url(/images/albums/10.jpg);
+    @include album-image();
+}
+
+.eleven {
+    background: url(/images/albums/11.jpg);
+    @include album-image();
+}
+
+.twelve {
+    background: url(/images/albums/12.jpg);
+    @include album-image();
+}
+
+.thirteen {
+    background: url(/images/albums/13.jpg);
+    @include album-image();
+}
+
+.fourteen {
+    background: url(/images/albums/14.jpg);
+    @include album-image();
+}
+
+.fifteen {
+    background: url(/images/albums/15.jpg);
+    @include album-image();
+}
+
+.sixteen {
+    background: url(/images/albums/16.jpg);
+    @include album-image();
+}
+
+.seventeen {
+    background: url(/images/albums/17.jpeg);
+    @include album-image();
+}
+
+.eighteen {
+    background: url(/images/albums/18.jpeg);
+    @include album-image();
+}
+
+.nineteen {
+    background: url(/images/albums/19.jpeg);
+    @include album-image();
+}
+
+.twenty {
+    background: url(/images/albums/20.jpg);
+    @include album-image();
+}
+
+.twenty-one {
+    background: url(/images/albums/21.jpg);
+    @include album-image();
+}
+
+.twenty-two {
+    background: url(/images/albums/22.jpg);
+    @include album-image();
+}
+
+.twenty-three {
+    background: url(/images/albums/23.jpg);
+    @include album-image();
+}
+
+.twenty-four {
+    background: url(/images/albums/24.jpg);
+    @include album-image();
+}
+
+.album__wrapper--link:hover .album__wrapper--overlay {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    text-align: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 1440px) and (max-height: 1400px) {
+    .album__wrapper--link:hover .album__wrapper--overlay {
+        display: flex;
+        flex-direction: column;
+        height: inherit;
+        text-align: center;
+        justify-content: center;
+    }
+}
