@@ -3,10 +3,10 @@ import React from 'react';
 import albums from '../../../albums';
 
 import AlbumCard from '../../layout/AlbumCard';
-import GridHead from './GridHead';
+import GridHead from '../GridHead/GridHead';
 
 import './_Grid.scss';
-import './_Filter.scss';
+import '../../partials/_Filter.scss';
 
 class Grid extends React.Component {
     constructor(props) {
@@ -24,6 +24,7 @@ class Grid extends React.Component {
         });
         this.setState({ products: albumsByLowest })
         console.log('filtered by lowest:', albumsByLowest);
+        window.scrollTo(0,600)
     }
 
     _filterByHighest = () => {
@@ -33,6 +34,39 @@ class Grid extends React.Component {
         });
         this.setState({ products: albumsByHighest })
         console.log('filtered by Highest:', albumsByHighest);
+        window.scrollTo(0,600)
+    }
+
+    _fitlerAtoZ = () => {
+        const albums = this.state.products;
+        const albumsInOrder = albums.sort((x, y) => {
+            if (x.title < y.title) {
+                return -1
+            }
+            if (y.title < x.title) {
+                return 1
+            }
+            return 0;
+        })
+        this.setState({ products: albumsInOrder })
+        console.log('filtered by Highest:', albumsInOrder);
+        window.scrollTo(0,600)
+    }
+
+    _fitlerZtoA = () => {
+        const albums = this.state.products;
+        const albumsInOrder = albums.sort((x, y) => {
+            if (x.title > y.title) {
+                return -1
+            }
+            if (y.title > x.title) {
+                return 1
+            }
+            return 0;
+        })
+        this.setState({ products: albumsInOrder })
+        console.log('filtered by Highest:', albumsInOrder);
+        window.scrollTo(0,600)
     }
 
     componentDidMount() {
@@ -54,9 +88,13 @@ class Grid extends React.Component {
             </div>
 
             <div className="filter">
-                <h3 className="filter__title">Filter Albums By Price:</h3>
-                <button onClick={this._filterByLowest} className="filter__button filter__button--divider">Low To High</button>
-                <button onClick={this._filterByHighest}className="filter__button">High To Low</button>
+                <h3 className="filter__title">Filter Albums</h3>
+                <div className="filter--wrapper">
+                    <button onClick={this._fitlerAtoZ}className="filter__button">Name From A-Z</button>
+                    <button onClick={this._fitlerZtoA}className="filter__button">Name from Z-A</button>
+                    <button onClick={this._filterByLowest} className="filter__button">Price Low To High</button>
+                    <button onClick={this._filterByHighest}className="filter__button">Price High To Low</button>
+                </div>
             </div>
         </div>
         </>

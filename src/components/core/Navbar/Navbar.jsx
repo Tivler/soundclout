@@ -4,35 +4,50 @@ import './_Navbar.scss';
 import { NavLink } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
-const Navbar = () => {
-    return (
+class Navbar extends React.Component {
 
-    <nav className="nav">
+    checked() {
+        if (document.querySelector("#nav").checked === true) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'visible';
+        }
+    }
 
-        <input type="checkbox" id="nav" className="nav--hidden"></input>
-        <div className="nav__menu--wrapper">
-            <label htmlFor="nav" className="nav__menu--button">
-                <i></i>
-                <i></i>
-                <i></i> 
-            </label>
-        </div>
+    componentDidMount() {
+        document.body.style.overflow = 'visible';
+    }
 
-        <div className="nav__logo--wrapper">
-            <Link to="/" className="nav__logo__text">Soundclout</Link>
-        </div>
+    render () {
+        return (
 
-        <div className="nav__list--wrapper">
-            <ul className="nav__list__ul">
-                <li className="nav__list__ul--item"><NavLink className="nav__list__ul--link" exact to="/">Home</NavLink></li>
-                <li className="nav__list__ul--item"><NavLink className="nav__list__ul--link" to="/products">Albums</NavLink></li>
-                <li className="nav__list__ul--item"><NavLink className="nav__list__ul--link" to="/contacts">Contact</NavLink></li>
-            </ul>
-        </div>
+        <nav className="nav">
 
-    </nav>
+            <input type="checkbox" id="nav" className="nav--hidden" onClick={this.checked}></input>
+            <div className="nav__menu--wrapper">
+                <label htmlFor="nav" className="nav__menu--button">
+                    <i className="nav__menu--icon"></i>
+                    <i className="nav__menu--icon"></i>
+                    <i className="nav__menu--icon"></i> 
+                </label>
+            </div>
 
-    )
+            <div className="nav__logo--wrapper">
+                <Link to="/" className="nav__logo__text">Soundclout</Link>
+            </div>
+
+            <div className="nav__list--wrapper">
+                <ul className="nav__list__ul">
+                    <li className="nav__list__ul--item"><NavLink className="nav__list__ul--link" exact to="/">Home</NavLink></li>
+                    <li className="nav__list__ul--item"><NavLink className="nav__list__ul--link" to="/products">Albums</NavLink></li>
+                    <li className="nav__list__ul--item"><NavLink className="nav__list__ul--link" to="/contacts">Contact</NavLink></li>
+                </ul>
+            </div>
+
+        </nav>
+
+        )
+    }
 }
 
 export default Navbar;

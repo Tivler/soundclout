@@ -8,6 +8,7 @@
     &__title {
         font-size: .9em;
         font-weight: 600;
+        margin-bottom: 1em;
     }
 
     &__button {
@@ -18,14 +19,11 @@
         text-decoration: none;
         padding:14px 30px 15px;
         border-radius: 7px;
-        width: fit-content;
+        width: inherit;
+        max-width: 185px;
         transition: .3s;
         margin-top: 1%;
         @include color();
-
-        &--divider {
-            margin-right: 15px;
-        }
 
         &:hover {
             @include color();
@@ -33,6 +31,22 @@
 
         &:focus {
             outline: none;
+        }
+    }
+
+    &--wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 205px);
+        grid-gap: 10px;
+        justify-content: center;
+
+        @media only screen and (max-width: 1400px) {
+            grid-template-columns: repeat(2, 205px);
+        }
+
+        @media only screen and (max-width: 500px) {
+            grid-template-columns: 205px;
+            margin-bottom: 2em;
         }
     }
 

@@ -23,7 +23,7 @@ const Footer = () => {
 
             <nav className="footer__nav">
                 <div className="footer__info">
-                    <a className="footer__info__icon"rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/thomas-mckyer/"><FontAwesomeIcon className="footer__info__icon--size" icon={faPhoneAlt} /><span className="footer__info__label">(704) 808 8000</span></a>
+                    <a className="footer__info__icon" href="/"><FontAwesomeIcon className="footer__info__icon--size" icon={faPhoneAlt} /><span className="footer__info__label">(704) 808 8000</span></a>
                     <a className="footer__info__icon footer__info__icon--divider"rel=" noopener noreferrer" target="_blank" href="https://www.google.com/gmail/"><FontAwesomeIcon className="footer__info__icon--size" icon={faEnvelope} /><span className="footer__info__label">information@soundclout.io</span></a>
                     <a className="footer__info__icon" rel="noopener noreferrer" target="_blank" href="https://www.google.com/maps"><FontAwesomeIcon className="footer__info__icon--size" icon={faMapMarkerAlt} /><span className="footer__info__label">123 Somewhere Lit Drive, Charlotte, NC 28277</span></a>
                 </div>

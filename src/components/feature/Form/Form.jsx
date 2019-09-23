@@ -1,6 +1,6 @@
 import React from 'react';
 import './_Form.scss';
-import FormHead from './FormHead';
+import FormHead from '../FormHead/FormHead';
 
 const initialState = {
     firstName: "",
@@ -68,6 +68,7 @@ class Form extends React.Component {
             firstNameClass.style.display = 'none';
             lastNameClass.style.display = 'none';
             emailClass.style.display = 'none';
+            window.scrollTo(0,0)
         }
     }
    

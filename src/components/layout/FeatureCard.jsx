@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Features = (props) => {
+const FeatureCard = (props) => {
     return (
         <>
             <a className={`featured__wrapper--link ${props.albums.id}`} rel="noopener noreferrer" href={`${props.albums.url}`} target="_blank">
@@ -13,4 +13,4 @@ const Features = (props) => {
     )
 }
 
-export default Features;
+export default FeatureCard;

@@ -1,12 +1,12 @@
 import React from 'react';
 import './_Featured.scss';
-import Features from '../../layout/Features';
+import FeatureCard from '../../layout/FeatureCard';
 
 class Featured extends React.Component {
     render () {
         const featuredList = this.props.albums.map((album,index) => {
             return (
-                <Features key={index} albums={album}/>
+                <FeatureCard key={index} albums={album}/>
             )
         });
 

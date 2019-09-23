@@ -21,12 +21,52 @@
     }
 
     &__menu {
+
         &--wrapper {
             display: none;
+
+            @media only screen and (max-width: 950px) {
+                display: flex;
+                height: 80px;
+                width: 100%;
+                position: fixed;
+                align-items: center;
+            }
+        }
+
+        &--button {
+
+            @media only screen and (max-width: 950px) {    
+                position: fixed;
+                right: 0;
+                cursor: pointer;
+                margin-right: 14%;
+                z-index: 9999;
+            }
+        }
+
+        &--icon {
+
+            @media only screen and (max-width: 950px) {
+                display: block;
+                width: 26px;
+                height: 3px;
+                background: #FFF;
+                border-radius: 2px;
+
+                &:nth-child(2) {
+                    margin-top: 4px;
+                }
+
+                &:nth-child(3) {
+                    margin-top: 4px;
+                }
+            }
         }
     }
 
     &__logo {
+        
         &--wrapper {
             height: 80px;
             margin-left: 14%;
@@ -40,6 +80,10 @@
             align-self: center;
             margin-right: 10px;
             filter: drop-shadow(-1px 1px 1px #000);
+
+            @media only screen and (max-width: 950px) {
+                display: none;
+            }
         }
 
         &__text {
@@ -51,10 +95,23 @@
             align-self: center;
             z-index: 9;
             transition: .3s;
+
+            @media only screen and (max-width: 950px) {
+                font-size: 1.7em
+            }
+
+            @media only screen and (max-width: 570px) { 
+                font-size: 1.3em;
+            }
         }
     }
 
     &__list {
+
+        @media only screen and (max-width: 1440px) and (max-height: 1400px) {
+            font-size: .75em;
+        }
+
         &--wrapper {
             position: fixed;
             top: 0;
@@ -62,6 +119,12 @@
             height: 80px;
             width: 100%;
             margin-right: 14%;
+
+            @media only screen and (max-width: 950px) {
+                left: 0;
+                transition: all 0.2s ease;
+                z-index: -1;
+            }
         }
 
         &__ul {
@@ -71,16 +134,37 @@
             height: 80px;
             font-size: .65em;
 
+            @media only screen and (max-width: 950px) {
+                display: block;
+                text-align: center;
+                font-size: .95em;
+            }
+
             &--item {
                 align-items: center;
                 list-style-type: none;
 
                 &:first-child {
                     padding-right: 40px;
+
+                    @media only screen and (max-width: 950px) {
+                        margin: 50% 0 5% 0;
+                        padding-right: 0px;
+                    }
+
+                    @media only screen and (max-width: 570px) { 
+                        margin-top: 45%;
+                        padding-right: 0px;
+                    }
                 }
 
                 &:nth-child(2){
                     padding-right: 40px;
+
+                    @media only screen and (max-width: 950px) {
+                        margin: 0 0 5% 0;
+                        padding-right: 0px;
+                    }
                 }
             }
 
@@ -91,6 +175,16 @@
                 color: #fff;
                 text-decoration: none;
                 text-shadow: -1px 1px 2px #000;
+
+                @media only screen and (max-width: 950px) {
+                    display: none;
+                    font-size: 1.8em;
+                    opacity: 0;
+                }
+
+                @media only screen and (max-width: 570px) { 
+                    font-size: 1.2em;
+                }
             }
         }
     }
@@ -109,128 +203,11 @@
     z-index: 7;
 }
 
-#nav:checked + .nav__menu--button i {
-    background: #fff;
-    transition: transform 0.2s ease;
-    box-shadow: none;
-}
-
-#nav:checked + .nav__menu--button i:nth-child(1) {
-    transform: translateY(14px) rotate(90deg);
-}
-
-#nav:checked + .nav__menu--button i:nth-child(2) {
-    opacity: 0;
-}
-
-#nav:checked + .nav__menu--button i:nth-child(3) {
-    transform:rotate(180deg);
-}
-
-#nav:checked ~ .nav__menu--wrapper .nav__list--wrapper .nav__list__ul {
-    display: flex;
-    flex-direction: column; 
-    height: 100vh;
-    width: 100%;
-}
-
-
-@media only screen and (max-width: 1440px) and (max-height: 1400px) {
-    .nav_list {
-        font-size: .75em;
-    }
- }
 
 @media only screen and (max-width: 950px) {
-    .nav__list--wrapper {
-        left: 0;
-        transition: all 0.3s ease;
-        z-index: -1;
-    }
-
-    .nav__list__ul {
-        display: block;
-        text-align: center;
-        font-size: .95em;
-    }
-
-    .nav__list__ul--item:first-child {
-        margin: 20% 0 10% 0;
-        padding-right: 0px;
-    }
-
-    .nav__list__ul--item:nth-child(2){
-        margin: 0 0 10% 0;
-        padding-right: 0px;
-    }
-    
-    .nav__list__ul--link {
-        display: none;
-        font-size: 1.8em;
-        opacity: 0;
-    }
-
-    .nav__menu--wrapper {
-        display: flex;
-        height: 80px;
-        width: 100%;
-        position: fixed;
-        align-items: center;
-    }
-
-    .nav__menu--button {
-        position: fixed;
-        right: 0;
-        cursor: pointer;
-        margin-right: 14%;
-        z-index: 9999;
-    }
-
-    .nav__menu--button i {
-        display: block;
-        width: 26px;
-        height: 3px;
-        background: #fff;
-        box-shadow: -2px 2px 1px #000;
-        border-radius: 2px;
-    }
-
-    .nav__menu--button i:nth-child(2) {
-        margin-top: 4px;
-    }
-
-    .nav__menu--button i:nth-child(3) {
-        margin-top: 4px;
-    }
-
     #nav:checked ~ .nav__list--wrapper {
         height: 100vh;
         background-color: rgba(0, 0, 0, .95);
-    }
-}
-
-@media only screen and (max-width: 950px) {
-   .nav__logo__image {
-       display: none;
-   }
-
-   .nav__logo__text {
-       font-size: 1.7em
-   }
-}
-
-@media only screen and (max-width: 570px) { 
-    .nav__list__ul--item:first-child {
-        margin-top: 45%;
-        padding-right: 0px;
-    }
-
-    .nav__list__ul--link {
-        font-size: 1.2em;
-    }
-
-    .nav__logo__text {
-        font-size: 1.3em;
     }
 }
 
