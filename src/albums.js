@@ -1,4 +1,5 @@
 const albums = [
+    
     { id: 'one', url:'https://soundcloud.com/tee-grizzley/sets/activated', title: "Activated", artist: "Tee Grizzley", price: 10.99},
     { id: 'two', url:'https://soundcloud.com/roddyricch/sets/b4tf',  title: "Be 4 The Fame", artist: "Roddy Ricch", price: 9.99},
     { id: 'three', url:'https://soundcloud.com/147calboy/sets/wildboy-6',  title: "Wildboy", artist: "Calboy", "price": 11.99},
@@ -13,7 +14,7 @@ const albums = [
     { id: 'twelve', url:'https://soundcloud.com/nba-youngboy/sets/until-death-call-my-name-1',  title: "Until Death Call My Name", artist: "YoungBoy Never Broke Again", price: 14.99},
     { id: 'thirteen', url:'https://soundcloud.com/dabilliondollarbaby/sets/baby-on-baby',  title: 'Baby On Baby', artist: "DaBaby", price: 10.99},
     { id: 'fourteen', url:'https://soundcloud.com/yungeenace/sets/chloe',  title: "Chloe", artist: "Yungeen Ace", price: 9.99},
-    { id: 'fifteen', url:'https://soundcloud.com/yungeenace/sets/chloe',  title: "F.N", artist: "Lil Tjay", price: 7.99},
+    { id: 'fifteen', url:'https://soundcloud.com/liltjay/sets/f-n-7',  title: "F.N", artist: "Lil Tjay", price: 7.99},
     { id: 'sixteen', url:'https://soundcloud.com/yungeenace/sets/life-im-livin',  title: "Life I'm Livin", artist: "Yungeen Ace", price: 10.99},
     { id: 'seventeen', url:'https://soundcloud.com/lildurk/sets/ls4ts2',  title: "Love Songs 4 The Streets II", artist: "Lil Durk", price: 10.99},
     { id: 'eighteen', url:'https://soundcloud.com/officialnocap/sets/neighborhood-hero',  title: "Neighborhood Hero", artist: "NoCap", price: 9.99},

@@ -69,6 +69,18 @@ class Grid extends React.Component {
         window.scrollTo(0,600)
     }
 
+    // componentDidMount() {
+    //     fetch('http://localhost:3000/products' , {
+    //         headers : { 
+    //             'Content-Type': 'application/json',
+    //             'Accept': 'application/json'
+    //         }
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => console.log(data))
+    //         .then(albums => this.setState({ albums }))
+    // }
+
     componentDidMount() {
         this.setState({ products: albums });
     }
@@ -84,6 +96,7 @@ class Grid extends React.Component {
             <p className="album__description">All the sounds, All the waves find something that fits you</p>
 
             <div className="album__wrapper">
+                {/* {this.state.products.map(p => <AlbumCard id={p.id} key={p.class} title={p.title} artist={p.artist} price={p.price} />)} */}
                 {this.state.products.map(p => <AlbumCard id={p.id} key={p.id} url={p.url} title={p.title} artist={p.artist} price={p.price} />)}
             </div>
 
