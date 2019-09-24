@@ -6,7 +6,7 @@ const mysql =   require("mysql");
 const cors =  require('cors');
 
 const app = express()
-const PORT = 3000
+const PORT = 3001
 
 ////////////////////////////////////
 //   instantiate middleware    ////
