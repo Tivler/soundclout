@@ -1,6 +1,7 @@
 require('dotenv').config()
 const express = require('express')
 const mysql =   require("mysql");
+const cors =  require('cors');
 
 const app = express()
 const PORT = 3000
@@ -11,6 +12,7 @@ const PORT = 3000
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cors());
 
 ////////////////////////////////////
 //  create database connection ////
@@ -38,7 +40,10 @@ connection.connect(function(err) {
 
 // index page
 app.get('/', function (req, res) {
-  res.send('Hello World')
+    connection.query("SELECT * FROM featured", function(err, data){    
+        console.log(data)
+        res.json(data) 
+    })
 })
 
 // fetch all products

@@ -1,12 +1,12 @@
 import React from 'react';
 
-const FeatureCard = (props) => {
+const FeatureCard = ({ id, url, title, artist, price}) => {
     return (
         <>
-            <a className={`featured__wrapper--link ${props.albums.id}`} rel="noopener noreferrer" href={`${props.albums.url}`} target="_blank">
+            <a className={`featured__wrapper--link ${id}`} rel="noopener noreferrer" href={`${url}`} target="_blank">
                 <div className="featured__wrapper--overlay">
-                    <h3 className="featured__wrapper__heading">{props.albums.title} - {props.albums.artist}</h3>
-                    <p className="featured__wrapper__description">Price <span>{props.albums.price}</span></p>
+                    <h3 className="featured__wrapper__heading">{title} - {artist}</h3>
+                    <p className="featured__wrapper__description">Price <span>{price}</span></p>
                 </div>
             </a>
         </>
