@@ -3,21 +3,11 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import './App.css';
 
-import albums from './albums';
-import featured from  './featured';
-
 import Index from './pages/Index';
 import Products from './pages/Products';
 import Contact from './pages/Contact';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      albums,
-      featured,
-    }  
-  };
 
   render () {
     return (

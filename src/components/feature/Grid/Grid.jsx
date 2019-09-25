@@ -1,7 +1,5 @@
 import React from 'react';
 
-// import albums from '../../../albums';
-
 import AlbumCard from '../../layout/AlbumCard';
 import GridHead from '../GridHead/GridHead';
 
@@ -11,61 +9,40 @@ import '../../partials/_Filter.scss';
 class Grid extends React.Component {
     constructor(props) {
         super(props);
-
         this.state = {
             products: []
         };
     }
 
     _filterByLowest = () => {
-        const albums = this.state.products;
-        const albumsByLowest = albums.sort((x, y) => {
-            return x.price - y.price;
-        });
-        this.setState({ products: albumsByLowest })
-        console.log('filtered by lowest:', albumsByLowest);
+        fetch('http://localhost:3001/lowtohigh')
+            .then(res => res.json())
+            .then(albums => this.setState({ products: albums }))
+        console.log('working')
         window.scrollTo(0,600)
     }
 
     _filterByHighest = () => {
-        const albums = this.state.products;
-        const albumsByHighest = albums.sort((x, y) => {
-            return y.price - x.price;
-        });
-        this.setState({ products: albumsByHighest })
-        console.log('filtered by Highest:', albumsByHighest);
+        fetch('http://localhost:3001/hightolow')
+            .then(res => res.json())
+            .then(albums => this.setState({ products: albums }))
+        console.log('working')
         window.scrollTo(0,600)
     }
 
     _fitlerAtoZ = () => {
-        const albums = this.state.products;
-        const albumsInOrder = albums.sort((x, y) => {
-            if (x.album_title < y.album_title) {
-                return -1
-            }
-            if (y.album_title < x.album_title) {
-                return 1
-            }
-            return 0;
-        })
-        this.setState({ products: albumsInOrder })
-        console.log('filtered by Highest:', albumsInOrder);
+        fetch('http://localhost:3001/atoz')
+            .then(res => res.json())
+            .then(albums => this.setState({ products: albums }))
+        console.log('working')
         window.scrollTo(0,600)
     }
 
     _fitlerZtoA = () => {
-        const albums = this.state.products;
-        const albumsInOrder = albums.sort((x, y) => {
-            if (x.album_title > y.album_title) {
-                return -1
-            }
-            if (y.album_title > x.album_title) {
-                return 1
-            }
-            return 0;
-        })
-        this.setState({ products: albumsInOrder })
-        console.log('filtered by Highest:', albumsInOrder);
+        fetch('http://localhost:3001/ztoa')
+            .then(res => res.json())
+            .then(albums => this.setState({ products: albums }))
+        console.log('working')
         window.scrollTo(0,600)
     }
 

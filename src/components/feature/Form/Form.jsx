@@ -63,7 +63,15 @@ class Form extends React.Component {
         const isValid = this.validate();
         if (isValid) {
             alert(`Thanks for joining our community, ${this.state.firstName}!`);
-            console.log(this.state);
+            const formData = this.state;
+            fetch('/submit' , {
+                method: 'post',
+                body: formData
+            })
+            .then((res) => res.text())
+            .then((text) => console.log(text , 'Thanks For Subscribing!'));
+
+            console.log(formData);
             this.setState(initialState);
             firstNameClass.style.display = 'none';
             lastNameClass.style.display = 'none';

@@ -143,7 +143,7 @@ $image-overlay: linear-gradient(rgba(0, 0, 0, 0.25));
             text-decoration: none;
             @include color();
             padding:16px 48px 18px;
-            border-radius: 500px;
+            border-radius: 5px;
             width: fit-content;
             align-self: center;
             transition: .3s;

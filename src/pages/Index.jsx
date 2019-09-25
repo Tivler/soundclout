@@ -3,8 +3,6 @@ import React from 'react';
 import Navbar from '../components/core/Navbar/Navbar'
 import Footer from '../components/core/Footer/Footer'
 
-import featured from '../featured';
-
 import Slider from '../components/feature/Slider/Slider'
 import Featured from '../components/feature/Featured/Featured'
 import Quotes from '../components/feature/Quotes/Quotes'
@@ -16,7 +14,7 @@ class Index extends React.Component {
         <>
         <Navbar />
         <Slider />
-        <Featured albums={featured} />
+        <Featured />
         <Spotlight />
         <Quotes />
         <Footer />
