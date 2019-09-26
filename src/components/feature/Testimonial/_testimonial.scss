@@ -25,13 +25,7 @@
 
 .th {
     text-align: center;
-    margin-top: 5%;
     font-family: 'Montserrat' , sans-serif;
-
-    @media only screen and (max-width: 1450px) {
-        margin-top: 4%;
-    }
-
 
     @media only screen and (max-width: 525px) {
         margin: 15% 0% 0% 0;
