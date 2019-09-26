@@ -6,6 +6,11 @@ import Footer from '../components/core/Footer/Footer'
 import Form from '../components/feature/Form/Form'
 
 class Contact extends React.Component {
+
+    componentDidMount() {
+        document.title = 'Soundclout | Newsletter'
+    }
+
     render () {
         return (
         <>

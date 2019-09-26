@@ -13,7 +13,7 @@ class Featured extends React.Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:3001/feature')
+        fetch('/feature')
             .then(res => res.json())
             .then(albums => this.setState({ products: albums }))
     }

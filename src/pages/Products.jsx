@@ -6,6 +6,11 @@ import Footer from '../components/core/Footer/Footer'
 import Grid from '../components/feature/Grid/Grid'
 
 class Products extends React.Component {
+
+    componentDidMount() {
+        document.title = 'Soundclout | albums'
+    }
+    
     render () {
             return (
             <>
