@@ -1,9 +1,11 @@
-const process = require('dotenv').config()
+require('dotenv').config()
 const express = require('express')
 const bodyParser = require('body-parser');
 const pino = require('express-pino-logger')();
 const mysql =   require("mysql");
 const cors =  require('cors');
+const helmet = require('helmet');
+const morgan = require('morgan');
 
 const app = express()
 const PORT = 3001
@@ -14,6 +16,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(pino);
 app.use(express.json());
 app.use(cors());
+app.use(helmet());
+app.use(morgan());
 
 // DATABASE CONNECTION
 var connection = mysql.createConnection({
@@ -35,8 +39,13 @@ connection.connect(function(err) {
 
 // API LIST
 
-// featured albums
+// API
 app.get('/', function (req, res) {
+    res.send("Hello World"); 
+})
+
+// featured albums
+app.get('/feature', function (req, res) {
     connection.query("SELECT * FROM featured_price INNER JOIN featured ON featured_price.featured_id = featured.featured_id", function(err, data){
         res.json(data) 
     })

@@ -108,96 +108,95 @@
 
     &__list {
 
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 80px;
+        font-size: .65em;
+
+        @media only screen and (max-width: 950px) {
+            display: block;
+            text-align: center;
+            font-size: .95em;
+        }
+
         @media only screen and (max-width: 1440px) and (max-height: 1400px) {
             font-size: .75em;
         }
 
-        &--wrapper {
-            position: fixed;
-            top: 0;
-            right: 0;
-            height: 80px;
-            width: 100%;
-            margin-right: 14%;
+    &--wrapper {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 80px;
+        width: 100%;
+        margin-right: 14%;
 
-            @media only screen and (max-width: 950px) {
-                left: 0;
-                transition: all 0.2s ease;
-                z-index: -1;
-            }
+        @media only screen and (max-width: 950px) {
+            left: 0;
+            transition: all 0.2s ease;
+            z-index: -1;
         }
+    }
 
-        &__ul {
-            display: flex;
+        &--item {
             align-items: center;
-            justify-content: flex-end;
-            height: 80px;
-            font-size: .65em;
+            list-style-type: none;
 
-            @media only screen and (max-width: 950px) {
-                display: block;
-                text-align: center;
-                font-size: .95em;
-            }
-
-            &--item {
-                align-items: center;
-                list-style-type: none;
-
-                &:first-child {
-                    padding-right: 40px;
-
-                    @media only screen and (max-width: 950px) {
-                        margin: 40% 0 5% 0;
-                        padding-right: 0px;
-                    }
-
-                    @media only screen and (max-width: 570px) { 
-                        margin-top: 45%;
-                        padding-right: 0px;
-                    }
-                }
-
-                &:nth-child(2){
-                    padding-right: 40px;
-
-                    @media only screen and (max-width: 950px) {
-                        margin: 0 0 5% 0;
-                        padding-right: 0px;
-                    }
-                }
-            }
-
-            &--link {
-                font-size: 1.25em;
-                font-weight: 700;
-                line-height: 1.25;
-                color: #fff;
-                text-decoration: none;
-                text-shadow: -1px 1px 2px #000;
+            &:first-child {
+                padding-right: 40px;
 
                 @media only screen and (max-width: 950px) {
-                    display: none;
-                    font-size: 1.8em;
-                    opacity: 0;
+                    margin: 40% 0 5% 0;
+                    padding-right: 0px;
                 }
 
                 @media only screen and (max-width: 570px) { 
-                    font-size: 1.2em;
+                    margin-top: 45%;
+                    padding-right: 0px;
                 }
+            }
+
+            &:nth-child(2){
+                padding-right: 40px;
+
+                @media only screen and (max-width: 950px) {
+                    margin: 0 0 5% 0;
+                    padding-right: 0px;
+                }
+            }
+        }
+
+        &--link {
+            font-size: 1.25em;
+            font-weight: 700;
+            line-height: 1.25;
+            color: #fff;
+            text-decoration: none;
+            text-shadow: -1px 1px 2px #000;
+
+            @media only screen and (max-width: 950px) {
+                display: none;
+                font-size: 1.8em;
+                opacity: 0;
+            }
+
+            @media only screen and (max-width: 570px) { 
+                font-size: 1.2em;
             }
         }
     }
 }
 
-#nav:checked ~ .nav__menu--wrapper .nav__list--wrapper .nav__list__ul {
+
+#nav:checked ~ .nav__menu--wrapper .nav__list--wrapper .nav__list {
     display: flex;
     flex-direction: column; 
     height: 100vh;
     width: 100%;
 }
 
-#nav:checked ~  .nav__list--wrapper .nav__list__ul .nav__list__ul--item .nav__list__ul--link {
+#nav:checked ~  .nav__list--wrapper .nav__list .nav__list--item .nav__list--link {
     opacity: 1;
     display: block;
     z-index: 7;
