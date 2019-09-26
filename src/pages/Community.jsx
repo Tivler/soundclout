@@ -7,7 +7,7 @@ import Form from '../components/feature/Form'
 import Header from '../components/layout/Header';
 import Testimonial from '../components/feature/Testimonial';
 
-class Contact extends React.Component {
+class Community extends React.Component {
 
     componentDidMount() {
         document.title = 'Soundclout | Newsletter'
@@ -26,4 +26,4 @@ class Contact extends React.Component {
     }
 }
 
-export default Contact;
+export default Community;
