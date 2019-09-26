@@ -4,6 +4,8 @@ import Navbar from '../components/core/Navbar'
 import Footer from '../components/core/Footer'
 
 import Form from '../components/feature/Form'
+import Header from '../components/layout/Header';
+import Testimonial from '../components/feature/Testimonial';
 
 class Contact extends React.Component {
 
@@ -13,12 +15,14 @@ class Contact extends React.Component {
 
     render () {
         return (
-        <>
-        <Navbar />
-        <Form />
-        <Footer />
-        </>
-    )
+            <>
+            <Navbar />
+            <Header title="Join Our Community" subtitle="Subscribe to stay connected, Never miss a beat!" />
+            <Form />
+            <Testimonial />
+            <Footer />
+            </>
+        )
     }
 }
 

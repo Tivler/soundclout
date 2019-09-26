@@ -1,6 +1,5 @@
 import React from 'react';
 import './_Form.scss';
-import FormHead from '../FormHead';
 
 const initialState = {
     firstName: "",
@@ -83,7 +82,6 @@ class Form extends React.Component {
     render () {
         return (
             <>
-            <FormHead />
             <div className="contact">
                 <h2 className="contact__title">Newsletter</h2>
                 <p className="contact__description">Recieve notifications when we post new albums</p>

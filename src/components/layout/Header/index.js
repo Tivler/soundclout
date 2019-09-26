@@ -1,7 +1,7 @@
 import React from 'react';
-import './_FormHead.scss';
+import './_header.scss';
 
-const FormHead = () => {
+const Header = (props) => {
     return (
         <>
         <div className="background-image"></div>
@@ -9,8 +9,8 @@ const FormHead = () => {
         <div className="content">
             <div className="content--wrapper">
                 <div className="content__header">
-                    <h1 className="content__header__title">Join Our Community</h1>
-                    <p className="content__header__subtitle">Subscribe to stay connected, Never miss a beat!</p>
+                    <h1 className="content__header__title">{props.title}</h1>
+                    <p className="content__header__subtitle">{props.subtitle}</p>
                 </div>
             </div>
         </div>
@@ -18,4 +18,4 @@ const FormHead = () => {
     )
 }
 
-export default FormHead;
+export default Header;

@@ -7,7 +7,7 @@ import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 
-    library.add(fab);
+library.add(fab);
 
 const Footer = () => {
     return (

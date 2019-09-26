@@ -1,7 +1,6 @@
 import React from 'react';
 
 import AlbumCard from '../../layout/AlbumCard';
-import GridHead from '../GridHead';
 
 import './_Grid.scss';
 import '../../partials/_Filter.scss';
@@ -56,8 +55,6 @@ class Grid extends React.Component {
         return (
 
         <>
-        <GridHead />
-
         <div className="album">
             <h2 className="album__title">Discover Your Sound</h2>
             <p className="album__description">All the sounds, All the waves find something that fits you</p>

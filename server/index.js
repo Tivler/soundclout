@@ -1,3 +1,4 @@
+
 require('dotenv').config()
 const express = require('express')
 const bodyParser = require('body-parser');
@@ -7,7 +8,7 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 
 const app = express()
-const PORT = 3001
+const PORT = process.env.port || 3001
 
 //INSTANTIATE MIDDLEWARE
 
@@ -18,12 +19,13 @@ app.use(helmet());
 app.use(morgan());
 
 // DATABASE CONNECTION
+console.log(process.env)
 var connection = mysql.createConnection({
   host: "localhost",
   // db port
   port: 3306, 
   user: "root",  
-  password: '        ',
+  password: process.env.MYPASSWORD,
   database: "soundclout_db"
 });
 
@@ -40,6 +42,13 @@ connection.connect(function(err) {
 // API
 app.get('/', function (req, res) {
     res.send("Hello World"); 
+})
+
+// fetch people for testimonials
+app.get('/contacts', (req, res) => {
+  connection.query("SELECT * FROM contacts", function(err, data){    
+    res.json(data) 
+  })
 })
 
 // featured albums
