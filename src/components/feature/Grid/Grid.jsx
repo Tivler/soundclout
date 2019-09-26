@@ -15,7 +15,7 @@ class Grid extends React.Component {
     }
 
     _filterByLowest = () => {
-        fetch('http://localhost:3001/lowtohigh')
+        fetch('/lowtohigh')
             .then(res => res.json())
             .then(albums => this.setState({ products: albums }))
         console.log('working')
@@ -23,7 +23,7 @@ class Grid extends React.Component {
     }
 
     _filterByHighest = () => {
-        fetch('http://localhost:3001/hightolow')
+        fetch('/hightolow')
             .then(res => res.json())
             .then(albums => this.setState({ products: albums }))
         console.log('working')
@@ -31,7 +31,7 @@ class Grid extends React.Component {
     }
 
     _fitlerAtoZ = () => {
-        fetch('http://localhost:3001/atoz')
+        fetch('/atoz')
             .then(res => res.json())
             .then(albums => this.setState({ products: albums }))
         console.log('working')
@@ -39,7 +39,7 @@ class Grid extends React.Component {
     }
 
     _fitlerZtoA = () => {
-        fetch('http://localhost:3001/ztoa')
+        fetch('/ztoa')
             .then(res => res.json())
             .then(albums => this.setState({ products: albums }))
         console.log('working')
@@ -47,7 +47,7 @@ class Grid extends React.Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:3001/products')
+        fetch('/products')
             .then(res => res.json())
             .then(albums => this.setState({ products: albums }))
     }

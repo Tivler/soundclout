@@ -3,7 +3,6 @@ const express = require('express')
 const bodyParser = require('body-parser');
 const pino = require('express-pino-logger')();
 const mysql =   require("mysql");
-const cors =  require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
 
@@ -15,7 +14,6 @@ const PORT = 3001
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(pino);
 app.use(express.json());
-app.use(cors());
 app.use(helmet());
 app.use(morgan());
 

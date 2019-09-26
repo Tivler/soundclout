@@ -9,6 +9,11 @@ import Quotes from '../components/feature/Quotes/Quotes'
 import Spotlight from '../components/feature/Spotlight/Spotlight';
 
 class Index extends React.Component {
+
+    componentDidMount() {
+        document.title = 'Soundclout'
+    }
+
     render () {
         return (
         <>
