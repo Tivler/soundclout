@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Navbar from '../components/core/Navbar/Navbar'
-import Footer from '../components/core/Footer/Footer'
+import Navbar from '../components/core/Navbar'
+import Footer from '../components/core/Footer'
 
-import Form from '../components/feature/Form/Form'
+import Form from '../components/feature/Form'
 
 class Contact extends React.Component {
 

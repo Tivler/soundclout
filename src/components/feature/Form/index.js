@@ -1,6 +1,6 @@
 import React from 'react';
 import './_Form.scss';
-import FormHead from '../FormHead/FormHead';
+import FormHead from '../FormHead';
 
 const initialState = {
     firstName: "",

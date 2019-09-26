@@ -1,7 +1,7 @@
 import React from 'react';
 
 import AlbumCard from '../../layout/AlbumCard';
-import GridHead from '../GridHead/GridHead';
+import GridHead from '../GridHead';
 
 import './_Grid.scss';
 import '../../partials/_Filter.scss';

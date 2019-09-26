@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Navbar from '../components/core/Navbar/Navbar'
-import Footer from '../components/core/Footer/Footer'
+import Navbar from '../components/core/Navbar'
+import Footer from '../components/core/Footer'
 
-import Slider from '../components/feature/Slider/Slider'
-import Featured from '../components/feature/Featured/Featured'
-import Quotes from '../components/feature/Quotes/Quotes'
-import Spotlight from '../components/feature/Spotlight/Spotlight';
+import Slider from '../components/feature/Slider'
+import Featured from '../components/feature/Featured'
+import Quotes from '../components/feature/Quotes'
+import Spotlight from '../components/feature/Spotlight';
 
 class Index extends React.Component {
 

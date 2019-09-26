@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Navbar from '../components/core/Navbar/Navbar'
-import Footer from '../components/core/Footer/Footer'
+import Navbar from '../components/core/Navbar'
+import Footer from '../components/core/Footer'
 
-import Grid from '../components/feature/Grid/Grid'
+import Grid from '../components/feature/Grid'
 
 class Products extends React.Component {
 

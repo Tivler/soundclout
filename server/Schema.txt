@@ -132,3 +132,4 @@ CREATE TABLE subscriber (
   subscriber_email VARCHAR(45) NOT NULL,
   primary key(subscriber_id)
 );
+
