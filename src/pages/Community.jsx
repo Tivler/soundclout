@@ -16,7 +16,12 @@ class Community extends React.Component {
     render () {
         return (
             <>
-            <Navbar />
+            <Navbar 
+                logo="Soundclout"
+                link_one="Home"
+                link_two="Albums"
+                link_three="Community"
+            />
             <Header title="Join Our Community" subtitle="Subscribe to stay connected, Never miss a beat!" />
             <NewsletterForm />
             <Testimonials />

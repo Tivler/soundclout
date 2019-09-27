@@ -33,14 +33,14 @@ class Navbar extends React.Component {
             </div>
 
             <div className="nav__logo--wrapper">
-                <Link to="/" className="nav__logo__text">Soundclout</Link>
+                <Link to="/" className="nav__logo__text">{this.props.logo}</Link>
             </div>
 
             <div className="nav__list--wrapper">
                 <ul className="nav__list">
-                    <li className="nav__list--item"><NavLink onClick={() => window.scrollTo(0,0)} className="nav__list--link" exact to="/">Home</NavLink></li>
-                    <li className="nav__list--item"><NavLink onClick={() => window.scrollTo(0,0)} className="nav__list--link" to="/albums">Albums</NavLink></li>
-                    <li className="nav__list--item"><NavLink onClick={() => window.scrollTo(0,0)} className="nav__list--link" to="/community">Community</NavLink></li>
+                    <li className="nav__list--item"><NavLink onClick={() => window.scrollTo(0,0)} className="nav__list--link" exact to="/">{this.props.link_one}</NavLink></li>
+                    <li className="nav__list--item"><NavLink onClick={() => window.scrollTo(0,0)} className="nav__list--link" to="/albums">{this.props.link_two}</NavLink></li>
+                    <li className="nav__list--item"><NavLink onClick={() => window.scrollTo(0,0)} className="nav__list--link" to="/community">{this.props.link_three}</NavLink></li>
                 </ul>
             </div>
 

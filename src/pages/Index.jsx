@@ -17,7 +17,12 @@ class Index extends React.Component {
     render () {
         return (
         <>
-        <Navbar />
+        <Navbar 
+            logo="Soundclout"
+            link_one="Home"
+            link_two="Albums"
+            link_three="Community"
+        />
         <SliderHero />
         <FeaturedAlbums />
         <SpotlightArtist />

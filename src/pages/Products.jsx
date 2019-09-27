@@ -15,7 +15,12 @@ class Products extends React.Component {
     render () {
             return (
             <>
-            <Navbar />
+            <Navbar 
+                logo="Soundclout"
+                link_one="Home"
+                link_two="Albums"
+                link_three="Community"
+            />
             <Header title="View our selection of Albums" subtitle="Featured Albums From Your Favorite Artists" />
             <AlbumsGrid />
             <Footer />
