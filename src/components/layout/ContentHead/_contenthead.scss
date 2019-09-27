@@ -1,35 +1,10 @@
-.testimonial__title {
-    font-family: 'Montserrat' , sans-serif;
-    font-weight: 700;
-    line-height: 1.8;
-    margin: 0 0 1em 0;
-    color: #081b33;
-    text-transform: uppercase;
-    width: 60%;
-    margin: 0 auto;
-    padding: 0 0 2em 0;
-
-    @media only screen and (max-width: 1800px) {
-        width: 76%;
-    }
-
-    @media only screen and (max-width: 1025px) {
-        width: 70%;
-    }
-}
-
-.testimonial__wrapper {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-}
-
-.th {
+.content-head {
     text-align: center;
     font-family: 'Montserrat' , sans-serif;
-
-    @media only screen and (max-width: 525px) {
-        margin: 15% 0% 0% 0;
-    }
+    min-width: 400px;
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 5em;
 
     &__title {
         color: #000;

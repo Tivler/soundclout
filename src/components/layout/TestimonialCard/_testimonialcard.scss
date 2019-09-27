@@ -59,7 +59,11 @@
         border-radius: 3px;
         color: #fff;
         text-decoration: none;
-        justify-self: flex-end
+        justify-self: flex-end;
+
+        @media only screen and (max-width: 1025px) {
+            justify-self: center;
+        }
     }
 
     &__content {
@@ -71,6 +75,10 @@
         min-width: 300px;
         max-width: 500px;
         align-items: flex-start;
+
+        @media only screen and (max-width: 1025px) {
+            justify-self: center;
+        }
 
         @media only screen and (max-width: 600px) {
             min-width: auto;

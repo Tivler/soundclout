@@ -1,5 +1,7 @@
 import React from 'react';
-import './_Form.scss';
+import './_newsletterform.scss';
+
+import ContentHead from '../../layout/ContentHead';
 
 const initialState = {
     firstName: "",
@@ -10,7 +12,7 @@ const initialState = {
     emailError: ""
   };
 
-class Form extends React.Component {
+class NewsletterForm extends React.Component {
     state = initialState;
 
     handleChange = event => {
@@ -82,10 +84,10 @@ class Form extends React.Component {
     render () {
         return (
             <>
-            <div className="contact">
-                <h2 className="contact__title">Newsletter</h2>
-                <p className="contact__description">Recieve notifications when we post new albums</p>
-            </div>
+            <ContentHead 
+                title="Newsletter"
+                desc="Recieve notifications when we post new albums"
+            />
 
             <div className="form__wrapper">
                 <form className="form" onSubmit={this.handleSubmit}>
@@ -138,4 +140,4 @@ class Form extends React.Component {
     }
 }
 
-export default Form;
+export default NewsletterForm;

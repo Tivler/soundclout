@@ -12,63 +12,43 @@
 .background-image {
     height: 60vh;
     width: 100%;
+    min-width: 400px;
     @include slider-image();
     @include color();
 }
 
-.content {
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: absolute;
     top: 0;
-    overflow: hidden;
     height: 60vh;
-    width: 100vw;
+    width: 100%;
+    min-width: 400px;
+    text-align: center;
+    font-family: 'Montserrat' , sans-serif;
 
-    &__header {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      position: absolute;
-      top: 0;
-      height: 68vh;
-      width: 100%;
-      text-align: center;
-      font-family: 'Montserrat' , sans-serif;
-      z-index: 4;
-  
-        &__title {
-            color: #fff;
-            font-size: 2.8em;
-            letter-spacing: -2px;
-            font-weight: 700;
-            margin-bottom: 1%;
+    &__title {
+        color: #fff;
+        font-size: 2.8em;
+        letter-spacing: -2px;
+        font-weight: 700;
+        margin-bottom: 1%;
+    }
 
-            @media only screen and (max-width: 1075px) {
-                font-size: 2.75em;
-            }
+    &__subtitle {
+        color: #fff;
+        margin-bottom: 2%;
+        font-size: 16px;
+        font-weight: 600;
 
-            @media only screen and (max-width: 550px) {
-                font-size: 2.15em;
-                margin-bottom: 3%;
-            }
-
-            @media only screen and (max-width: 300px) {
-                font-size: 2em;
-            }
+        @media only screen and (max-width: 550px) {
+            margin-bottom: 3%;
         }
-    
-        &__subtitle {
-            color: #fff;
-            margin-bottom: 2%;
-            font-size: 16px;
-            font-weight: 600;
 
-            @media only screen and (max-width: 550px) {
-                margin-bottom: 3%;
-            }
-
-            @media only screen and (max-width: 300px) {
-                font-size: 14px;
-            }
+        @media only screen and (max-width: 300px) {
+            font-size: 14px;
         }
     }
 }

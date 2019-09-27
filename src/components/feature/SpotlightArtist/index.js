@@ -1,14 +1,13 @@
 import React from 'react';
-import './_Spotlight.scss';
+import './_spotlightartist.scss';
 
-const Spotlight = () => {
+const SpotlightArtist = () => {
     return (
         <>
         <div className="spotlight__wrapper">
              <a className="spotlight__wrapper--link post" rel="noopener noreferrer" href="https://www.instagram.com/champagnepapi/?hl=en" target="_blank">
                 <div className="spotlight__wrapper--overlay">
-                    <h3 className="spotlight_wrapper__heading">Views - Drake</h3>
-                    <p className="spotlight__wrapper__description">Price <span>14.99</span></p>
+                    <h3 className="spotlight_wrapper__heading">Click for more Drake</h3>
                 </div>
             </a>
 
@@ -23,4 +22,4 @@ const Spotlight = () => {
     )
 }
 
-export default Spotlight;
+export default SpotlightArtist;

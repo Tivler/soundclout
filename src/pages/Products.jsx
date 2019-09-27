@@ -3,8 +3,8 @@ import React from 'react';
 import Navbar from '../components/core/Navbar'
 import Footer from '../components/core/Footer'
 
-import Grid from '../components/feature/Grid'
 import Header from '../components/layout/Header';
+import AlbumsGrid from '../components/feature/AlbumsGrid';
 
 class Products extends React.Component {
 
@@ -17,7 +17,7 @@ class Products extends React.Component {
             <>
             <Navbar />
             <Header title="View our selection of Albums" subtitle="Featured Albums From Your Favorite Artists" />
-            <Grid />
+            <AlbumsGrid />
             <Footer />
             </>
         )

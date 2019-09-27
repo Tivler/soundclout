@@ -1,9 +1,10 @@
 import React from 'react';
-import './_testimonial.scss';
+import './_testimonials.scss';
 
 import TestimonialCard from "../../layout/TestimonialCard/TestimonialCard";
+import ContentHead from '../../layout/ContentHead';
 
-class Testimonial extends React.Component {
+class Testimonials extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -20,10 +21,10 @@ class Testimonial extends React.Component {
     render () {
         return (
             <>
-                <div className="th">
-                    <h2 className="th__title">Some Success Stories</h2>
-                    <p className="th__description">Here's what the community has to say about Soundclout</p>
-                </div>
+                <ContentHead 
+                    title="Some Success Stories"
+                    desc="Here's what the community has to say about Soundclout"
+                />
 
                 <div className="testimonial__wrapper">
                 {this.state.people.map(p => <TestimonialCard key={p.contact_id}  url={p.contact_url} firstName={p.contact_firstName} content={p.contact_content} /> )}
@@ -33,4 +34,4 @@ class Testimonial extends React.Component {
     }
 }
 
-export default Testimonial;
+export default Testimonials;

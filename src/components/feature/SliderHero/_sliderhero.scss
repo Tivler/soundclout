@@ -15,7 +15,7 @@ $image-overlay: linear-gradient(rgba(0, 0, 0, 0.25));
     position: relative;
     overflow: hidden;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
 
     &--wrapper {
       position: absolute;
@@ -91,13 +91,15 @@ $image-overlay: linear-gradient(rgba(0, 0, 0, 0.25));
       display: flex;
       flex-direction: column;
       justify-content: center;
-      position: absolute;
-      top: 80px;
       height: 100vh;
-      width: 100%;
+      margin: 0 auto;
+      padding-top: 20px;
       text-align: center;
       font-family: 'Montserrat' , sans-serif;
-      z-index: 4;
+
+      @media only screen and (max-width: 875px) {
+        width: 90%;
+      }
   
         &__title {
             color: #fff;
@@ -105,6 +107,7 @@ $image-overlay: linear-gradient(rgba(0, 0, 0, 0.25));
             letter-spacing: -2px;
             font-weight: 700;
             margin-bottom: 1%;
+            z-index: 2;
 
             @media only screen and (max-width: 1075px) {
               font-size: 2.75em;
@@ -125,6 +128,7 @@ $image-overlay: linear-gradient(rgba(0, 0, 0, 0.25));
             margin-bottom: 2%;
             font-size: 16px;
             font-weight: 600;
+            z-index: 2;
 
             @media only screen and (max-width: 550px) {
               margin-bottom: 3%;
@@ -177,7 +181,7 @@ $image-overlay: linear-gradient(rgba(0, 0, 0, 0.25));
           width: 800px;
         }
 
-        @media only screen and (max-width: 950px) {
+        @media only screen and (max-width: 1150px) {
           display: none;
         }
       }

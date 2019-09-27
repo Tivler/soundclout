@@ -3,10 +3,10 @@ import React from 'react';
 import Navbar from '../components/core/Navbar'
 import Footer from '../components/core/Footer'
 
-import Slider from '../components/feature/Slider'
-import Featured from '../components/feature/Featured'
-import Quotes from '../components/feature/Quotes'
-import Spotlight from '../components/feature/Spotlight';
+import SliderHero from '../components/feature/SliderHero';
+import FeaturedAlbums from '../components/feature/FeaturedAlbums';
+import SpotlightArtist from '../components/feature/SpotlightArtist';
+import Quote from '../components/feature/Quote';
 
 class Index extends React.Component {
 
@@ -18,10 +18,15 @@ class Index extends React.Component {
         return (
         <>
         <Navbar />
-        <Slider />
-        <Featured />
-        <Spotlight />
-        <Quotes />
+        <SliderHero />
+        <FeaturedAlbums />
+        <SpotlightArtist />
+        <Quote 
+            title="Find A Sound That Fits You"
+            content='"There is something here for everyone! Find your sound, create your own wave find music and a sound that speaks to you. That is why we are here that is what Soundclout is all about."'
+            author="Thomas McKyer"
+            position="Founder, Soundclout"
+        />
         <Footer />
         </>
     )

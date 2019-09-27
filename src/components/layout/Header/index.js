@@ -5,15 +5,12 @@ const Header = (props) => {
     return (
         <>
         <div className="background-image"></div>
+     
+        <header className="header">
+            <h1 className="header__title">{props.title}</h1>
+            <p className="header__subtitle">{props.subtitle}</p>
+        </header>
 
-        <div className="content">
-            <div className="content--wrapper">
-                <div className="content__header">
-                    <h1 className="content__header__title">{props.title}</h1>
-                    <p className="content__header__subtitle">{props.subtitle}</p>
-                </div>
-            </div>
-        </div>
         </>
     )
 }

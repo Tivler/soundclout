@@ -1,11 +1,12 @@
 import React from 'react';
 
 import AlbumCard from '../../layout/AlbumCard';
+import ContentHead from '../../layout/ContentHead';
 
-import './_Grid.scss';
+import './_albumsgrid.scss';
 import '../../partials/_Filter.scss';
 
-class Grid extends React.Component {
+class AlbumsGrid extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -55,10 +56,13 @@ class Grid extends React.Component {
         return (
 
         <>
-        <div className="album">
-            <h2 className="album__title">Discover Your Sound</h2>
-            <p className="album__description">All the sounds, All the waves find something that fits you</p>
 
+        <ContentHead 
+            title="Discover Your Sound"
+            desc="All the sounds, All the waves find something that fits you"
+        />
+        
+        <div className="album">
             <div className="album__wrapper">
                 {this.state.products.map(p => <AlbumCard id={p.album_class} key={p.album_class}  url={p.album_url} title={p.album_title} artist={p.album_artist} price={p.price}/>)}
             </div>
@@ -79,4 +83,4 @@ class Grid extends React.Component {
     }
 }
  
-export default Grid;
+export default AlbumsGrid;

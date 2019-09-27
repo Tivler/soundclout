@@ -7,3 +7,11 @@ body {
 span {
     color: #F30;
 }
+
+html {
+    min-width: 400px;
+}
+
+#root {
+    min-width: 400px;
+}

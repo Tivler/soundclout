@@ -6,6 +6,7 @@
 .quote {
     text-align: center;
     font-family: 'Montserrat' , sans-serif;
+    min-width: 400px;
 
     &--wrapper {
         color: #fff;
@@ -17,12 +18,11 @@
         @include color();
 
         @media only screen and (max-width: 915px) {
-            padding: 5% 25%;
+            padding: 5% 15%;
          }
 
          @media only screen and (max-width: 600px) {
             margin-top: 0;
-            padding: 7% 25%;
          }
     }
 
