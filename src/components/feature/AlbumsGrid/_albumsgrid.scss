@@ -336,3 +336,25 @@
         justify-content: center;
     }
 }
+
+.search {
+    text-align: center;
+    font-family: 'Montserrat' , sans-serif;
+    min-width: 400px;
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 1em;
+
+    &__input {
+        font-family: "Montserrat" ,  sans-serif;
+        font-weight: 700;
+        display: inline-block;
+        width: fit-content;
+        padding: 1em;
+        font-size: 1.5em;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

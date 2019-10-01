@@ -4,6 +4,7 @@ $image-overlay: linear-gradient(rgba(0, 0, 0, 0.25));
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 @mixin color {
@@ -44,25 +45,33 @@ $image-overlay: linear-gradient(rgba(0, 0, 0, 0.25));
             width: 100%;
             z-index: 1;
           }
+
+          @media only screen and (max-width: 1024px) {
+              background-attachment: initial;
+          }
       }
 
       &:nth-child(2) {
-        background: url(/images/image2.jpg);
-        height: 100vh;
-        width: 100%;
-        @include slider-image();
-
-        &:before {
-          content: '';
-          display: block;
-          background-color: #000;
-          height: 100%;
-          left: 0;
-          opacity: 0.45;
-          position: absolute;
-          top: 0;
+          background: url(/images/image2.jpg);
+          height: 100vh;
           width: 100%;
-          z-index: 1;
+          @include slider-image();
+
+          &:before {
+            content: '';
+            display: block;
+            background-color: #000;
+            height: 100%;
+            left: 0;
+            opacity: 0.45;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+          }
+
+        @media only screen and (max-width: 1024px) {
+          background-attachment: initial;
         }
       }
 
@@ -83,6 +92,10 @@ $image-overlay: linear-gradient(rgba(0, 0, 0, 0.25));
           top: 0;
           width: 100%;
           z-index: 1;
+        }
+
+        @media only screen and (max-width: 1024px) {
+          background-attachment: initial;
         }
       }
     }

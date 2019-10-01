@@ -10,12 +10,13 @@ class AlbumsGrid extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            products: []
+            products: [],
+            search: ''
         };
     }
 
     _filterByLowest = () => {
-        fetch('/lowtohigh')
+        fetch('/pricelowtohigh')
             .then(res => res.json())
             .then(albums => this.setState({ products: albums }))
         console.log('working')
@@ -23,7 +24,7 @@ class AlbumsGrid extends React.Component {
     }
 
     _filterByHighest = () => {
-        fetch('/hightolow')
+        fetch('/pricehightolow')
             .then(res => res.json())
             .then(albums => this.setState({ products: albums }))
         console.log('working')
@@ -31,7 +32,7 @@ class AlbumsGrid extends React.Component {
     }
 
     _fitlerAtoZ = () => {
-        fetch('/atoz')
+        fetch('/namefromatoz')
             .then(res => res.json())
             .then(albums => this.setState({ products: albums }))
         console.log('working')
@@ -39,17 +40,32 @@ class AlbumsGrid extends React.Component {
     }
 
     _fitlerZtoA = () => {
-        fetch('/ztoa')
+        fetch('/namefromztoa')
             .then(res => res.json())
             .then(albums => this.setState({ products: albums }))
         console.log('working')
         window.scrollTo(0,600)
     }
 
+    _handleSearch = (e) => {
+        this.setState({
+            search: e.target.value
+        })
+
+        if (!e.target.value) {
+            this._displayAlbums();
+            return
+        }
+    }
+
+    _displayAlbums = () => {
+        fetch('/albums')
+        .then(res => res.json())
+        .then(albums => this.setState({ products: albums }))
+    }
+
     componentDidMount() {
-        fetch('/products')
-            .then(res => res.json())
-            .then(albums => this.setState({ products: albums }))
+        this._displayAlbums();
     }
 
     render () {
@@ -61,6 +77,10 @@ class AlbumsGrid extends React.Component {
             title="Discover Your Sound"
             desc="All the sounds, All the waves find something that fits you"
         />
+
+        <section className="search">
+            <input className="search__input" type="text" placeholder="Search For An Album" onChange={this._handleSearch} value={this.state.search} ></input>
+        </section>
         
         <div className="album">
             <div className="album__wrapper">

@@ -125,18 +125,25 @@ AS (SELECT * FROM album_price ORDER BY price);
 CREATE TABLE price_down
 AS (SELECT * FROM album_price ORDER BY price DESC);
 
-CREATE TABLE contacts (
-  contact_id INT AUTO_INCREMENT NOT NULL,
-  contact_firstName VARCHAR(45) NOT NULL,
-  contact_lastName VARCHAR(45) NOT NULL,
-  contact_url LONGTEXT NOT NULL,
-  contact_content LONGTEXT NOT NULL,
-  primary key(contact_id)
+CREATE TABLE testimonials (
+  test_id INT AUTO_INCREMENT NOT NULL,
+  test_firstName VARCHAR(45) NOT NULL,
+  test_lastName VARCHAR(45) NOT NULL,
+  test_url LONGTEXT NOT NULL,
+  test_content LONGTEXT NOT NULL,
+  primary key(test_id)
 );
 
-INSERT INTO contacts (contact_firstName, contact_lastName, contact_url, contact_content)
+INSERT INTO testimonials (test_firstName, test_lastName, test_url, test_content)
 VALUES
 ("Tyreek" , "Hill" , "/images/people/people1.jpg", "I’ve been listening to soundclout since the beginning! I found my sound and the music that speaks to me!"),
 ("Lamar" , "Jackson" , "/images/people/people2.jpg", "Soundclout changed the way I find new music, no more searching up songs on YouTube I just come to Soundclout and find all the new vibes"),
 ("Patrick" , "Mahomes" , "/images/people/people3.jpg", "Game Changer! This platform allowed me a place to share my music and grow my following across all my tracks");
 
+CREATE TABLE contacts (
+  contact_id INT AUTO_INCREMENT NOT NULL,
+  firstName VARCHAR(45) NOT NULL,
+  lastName VARCHAR(45) NOT NULL,
+  email LONGTEXT NOT NULL,
+  primary key(contact_id)
+);

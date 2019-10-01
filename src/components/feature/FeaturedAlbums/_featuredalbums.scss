@@ -5,14 +5,10 @@
 }
 
 .featured {
-    margin: 5% 17% 10%;   
+    margin: 0 17%;   
     font-family: "Montserrat" , sans-serif; 
     text-align: center;
     font-family: 'Montserrat' , sans-serif;
-
-    @media only screen and (max-width: 1450px) {
-        margin-top: 5%;
-    }
 
     @media only screen and (max-width: 525px) {
         margin: 15% 0% 0% 0;
@@ -24,7 +20,7 @@
         grid-gap: 1.5em;
         justify-content: center;
         margin-top: 5%;
-        margin-bottom: 7%;
+        margin-bottom: 4%;
 
         @media only screen and (max-width: 1400px) {
             grid-template-columns: 350px 350px;

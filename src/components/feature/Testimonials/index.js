@@ -13,7 +13,7 @@ class Testimonials extends React.Component {
     }
 
     componentDidMount() {
-        fetch('/contacts')
+        fetch('/testimonials')
             .then(res => res.json())
             .then(person => this.setState({ people: person }))
     }
@@ -22,12 +22,12 @@ class Testimonials extends React.Component {
         return (
             <>
                 <ContentHead 
-                    title="Some Success Stories"
+                    title="Hear From Our Community"
                     desc="Here's what the community has to say about Soundclout"
                 />
 
                 <div className="testimonial__wrapper">
-                {this.state.people.map(p => <TestimonialCard key={p.contact_id}  url={p.contact_url} firstName={p.contact_firstName} content={p.contact_content} /> )}
+                {this.state.people.map(p => <TestimonialCard key={p.test_id}  url={p.test_url} firstName={p.test_firstName} content={p.test_content} /> )}
                 </div>
             </>
         )

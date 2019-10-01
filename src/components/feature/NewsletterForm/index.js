@@ -56,28 +56,45 @@ class NewsletterForm extends React.Component {
     }
 
     handleSubmit = (event) => {
+        event.preventDefault();
+        let firstName = document.getElementsByName('firstName')[0].value;
+        let lastName = document.getElementsByName('lastName')[0].value;
+        let email = document.getElementsByName('email')[0].value;
+
         let firstNameClass = document.querySelector('.firstNameError');
         let lastNameClass = document.querySelector('.lastNameError');
         let emailClass = document.querySelector('.emailError');
-
-        event.preventDefault();
         const isValid = this.validate();
         if (isValid) {
-            alert(`Thanks for joining our community, ${this.state.firstName}!`);
-            const formData = this.state;
-            fetch('/submit' , {
-                method: 'post',
-                body: formData
-            })
-            .then((res) => res.text())
-            .then((text) => console.log(text , 'Thanks For Subscribing!'));
-
-            console.log(formData);
+            this.newContact(firstName, lastName, email)
+                .then(res => alert(`Thanks for joining our community, ${this.state.firstName}!`))
             this.setState(initialState);
             firstNameClass.style.display = 'none';
             lastNameClass.style.display = 'none';
             emailClass.style.display = 'none';
             window.scrollTo(0,0)
+        }
+    }
+
+    newContact = async (firstName, lastName, email) => {
+        try {
+         const res = await fetch('/submit' , {
+                method: 'post',
+                headers: {
+                    "Content-Type": "application/json", 
+                },
+                body: JSON.stringify({
+                    firstName,
+                    lastName,
+                    email
+                })
+            })
+            const content = await res.json();
+            console.log(content)
+        }
+
+        catch(err) {
+            console.log(err)
         }
     }
    
@@ -90,7 +107,7 @@ class NewsletterForm extends React.Component {
             />
 
             <div className="form__wrapper">
-                <form className="form" onSubmit={this.handleSubmit}>
+                <form className="form" onSubmit={this.handleSubmit} method="POST" action="/submit">
                     <h1 className="form__title">Subscribe</h1>
 
                     <label htmlFor="inputFirstName"></label>

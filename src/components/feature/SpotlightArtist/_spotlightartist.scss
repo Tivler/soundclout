@@ -30,29 +30,12 @@
         margin: 12% 0 0;
     }
 
-    &__title {
-        color: #000;
-        font-size: 3.5em;
-        letter-spacing: -2px;
-        font-weight: 700;
-        margin-bottom: 1%;
-
-        @media only screen and (max-width: 915px) {
-            font-size: 2.9em;
-        }
-
-        @media only screen and (max-width: 750px) {
-            font-size: 2.2em;
-        }
-    }
-
     &__wrapper {
         display: grid;
         grid-template-columns: 500px 500px;
         grid-gap: 50px;
         justify-content: center;
-        margin-top: 8%;
-        margin-bottom: 8%;
+        margin-bottom: 6%;
         font-family: 'Montserrat' , sans-serif;
 
         @media only screen and (max-width: 1400px) {
@@ -229,9 +212,16 @@
     }
 }
 
-.post {
+.drake {
     background: url(/images/drake.png);
     @include album-image();
+}
+
+
+.meek {
+    background: url(/images/meek.jpg);
+    @include album-image();
+    background-position: center;
 }
 
 .featured__wrapper--link:hover .featured__wrapper--overlay {
