@@ -5,15 +5,9 @@
 }
 
 .album {
-    margin: 5% 17% 7%;   
+    margin: 2% 17% 7%;   
     text-align: center;
     font-family: 'Montserrat' , sans-serif;
-
-
-    @media only screen and (max-width: 1450px) {
-        margin-top: 5%;
-    }
-
 
     @media only screen and (max-width: 525px) {
         margin: 15% 0% 0% 0;
@@ -55,7 +49,7 @@
         grid-template-columns: 350px 350px 350px;
         grid-gap: 1.5em;
         justify-content: center;
-        margin-top: 7%;
+        margin-top: 2%;
         margin-bottom: 7%;
 
         @media only screen and (max-width: 1400px) {
@@ -319,6 +313,126 @@
     @include album-image();
 }
 
+.twenty-five {
+    background: url(/images/albums/25.jpg);
+    @include album-image();
+}
+
+.twenty-six {
+    background: url(/images/albums/26.jpg);
+    @include album-image();
+}
+
+.twenty-seven {
+    background: url(/images/albums/27.jpg);
+    @include album-image();
+}
+
+.twenty-eight {
+    background: url(/images/albums/28.jpg);
+    @include album-image();
+}
+
+.twenty-nine {
+    background: url(/images/albums/29.jpg);
+    @include album-image();
+}
+
+.thirty {
+    background: url(/images/albums/30.png);
+    @include album-image();
+}
+
+.thirty-one {
+    background: url(/images/albums/31.jpg);
+    @include album-image();
+}
+
+.thirty-two {
+    background: url(/images/albums/32.jpg);
+    @include album-image();
+}
+
+.thirty-three {
+    background: url(/images/albums/33.jpg);
+    @include album-image();
+}
+
+.thirty-four {
+    background: url(/images/albums/34.jpg);
+    @include album-image();
+}
+
+.thirty-five {
+    background: url(/images/albums/35.jpg);
+    @include album-image();
+}
+
+.thirty-six {
+    background: url(/images/albums/36.jpg);
+    @include album-image();
+}
+
+.thirty-seven {
+    background: url(/images/albums/37.png);
+    @include album-image();
+}
+
+.thirty-eight {
+    background: url(/images/albums/38.jpg);
+    @include album-image();
+}
+
+.thirty-nine {
+    background: url(/images/albums/39.jpg);
+    @include album-image();
+}
+
+.fourty {
+    background: url(/images/albums/40.jpg);
+    @include album-image();
+}
+
+.fourty-one {
+    background: url(/images/albums/41.jpg);
+    @include album-image();
+}
+
+.fourty-two {
+    background: url(/images/albums/42.jpg);
+    @include album-image();
+}
+
+.fourty-three {
+    background: url(/images/albums/43.jpg);
+    @include album-image();
+}
+
+.fourty-four {
+    background: url(/images/albums/44.jpg);
+    @include album-image();
+}
+
+.fourty-five {
+    background: url(/images/albums/45.jpg);
+    @include album-image();
+}
+
+.fourty-six {
+    background: url(/images/albums/46.jpg);
+    @include album-image();
+}
+
+.fourty-seven {
+    background: url(/images/albums/47.jpg);
+    @include album-image();
+}
+
+.fourty-eight {
+    background: url(/images/albums/48.jpg);
+    @include album-image();
+}
+
 .album__wrapper--link:hover .album__wrapper--overlay {
     display: flex;
     flex-direction: column;
@@ -343,18 +457,41 @@
     min-width: 400px;
     width: 70%;
     margin: 0 auto;
-    padding-top: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+
+    @media only screen and (max-width: 950px) {
+        display: none;
+    }
+
+    &__title {
+        font-weight: 700;
+        height: 50px;
+        background: transparent;
+        border: none;
+        font-size: 1.2em;
+        color: #000;
+        padding-left: 150px;
+    }
 
     &__input {
         font-family: "Montserrat" ,  sans-serif;
         font-weight: 700;
-        display: inline-block;
-        width: fit-content;
-        padding: 1em;
-        font-size: 1.5em;
+        height: 50px;
+        background: transparent;
+        border: none;
+        font-size: 1.2em;
+        color: #f50;
+        padding-left: 10px;
+        width: 200px;
 
         &:focus {
             outline: none;
+        }
+
+        &::placeholder {
+            color: #D3D3D3;
         }
     }
 }

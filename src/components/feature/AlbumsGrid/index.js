@@ -56,6 +56,10 @@ class AlbumsGrid extends React.Component {
             this._displayAlbums();
             return
         }
+
+        fetch(`/albums/title/${e.target.value}`)
+            .then(res => res.json())
+            .then(data => this.setState({products: data}), err=> console.log(err))
     }
 
     _displayAlbums = () => {
@@ -79,7 +83,8 @@ class AlbumsGrid extends React.Component {
         />
 
         <section className="search">
-            <input className="search__input" type="text" placeholder="Search For An Album" onChange={this._handleSearch} value={this.state.search} ></input>
+            <label className="search__title">Search Albums For</label>
+            <input className="search__input" type="text" placeholder="Title" onChange={this._handleSearch} value={this.state.search} ></input>
         </section>
         
         <div className="album">

@@ -86,10 +86,21 @@ router.post('/submit', (req, res) => {
   })
 })
 
+// View all contacts
 router.get('/contacts', (req, res) => {
   connection.query("SELECT * FROM contacts", function(err, data){  
     console.log(data);  
     res.json(data) 
+  })
+})
+
+// Handle Search Filter
+router.get('/albums/title/:title' , (req , res) => {
+  const { title } = req.params
+  const sql = mysql.format(`SELECT * FROM album_price INNER JOIN albums ON album_price.album_id = albums.album_id WHERE 1 AND album_title LIKE ?` ,[`${title}%`])
+  connection.query(sql, (err , data) => {
+    if (err) throw err;
+    res.send(data)
   })
 })
 
