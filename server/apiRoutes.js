@@ -4,12 +4,12 @@ const mysql = require('mysql');
 // DATABASE CONNECTION
 console.log(process.env)
 var connection = mysql.createConnection({
-  host: "us-cdbr-iron-east-05.cleardb.net",
+  host: "localhost",
   // db port
   port: 3306, 
-  user: "b4e0b50516c413",  
+  user: "root",  
   password: process.env.MYPASSWORD,
-  database: "heroku_b8aecbe04dd5bbf"
+  database: "soundclout_db"
 });
 
 connection.connect(function(err) {
