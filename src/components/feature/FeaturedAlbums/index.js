@@ -14,7 +14,7 @@ class FeaturedAlbums extends React.Component {
     }
 
     componentDidMount() {
-        fetch('/featuredalbums')
+        fetch('/api/featuredalbums')
             .then(res => res.json())
             .then(albums => this.setState({ products: albums }))
     }

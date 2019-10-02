@@ -78,7 +78,7 @@ class NewsletterForm extends React.Component {
 
     newContact = async (firstName, lastName, email) => {
         try {
-         const res = await fetch('/submit' , {
+         const res = await fetch('/api/submit' , {
                 method: 'post',
                 headers: {
                     "Content-Type": "application/json", 

@@ -20,6 +20,7 @@ app.use(morgan());
 const router = require('./apiRoutes');
 
 app.use('/' , router)
+app.use('/api' , router)
 
 // LAUNCH SERVER
 app.listen(PORT, function () {
