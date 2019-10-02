@@ -13,7 +13,7 @@ class Testimonials extends React.Component {
     }
 
     componentDidMount() {
-        fetch('/testimonials')
+        fetch('/api/testimonials')
             .then(res => res.json())
             .then(person => this.setState({ people: person }))
     }
