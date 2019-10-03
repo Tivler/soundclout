@@ -2,49 +2,49 @@ const expect = require("chai").expect;
 const request = require("request");
 
 describe("API Routes Test", () => {
-  it("Get Request To Root", done => {
+  it("Should return Soundclout Database", done => {
     request("http://localhost:4000/api", (err, res, body) => {
       expect(res.statusCode).to.equal(200);
       done();
     });
   });
 
-  it("Get Request Made From Testimonials", done => {
+  it("Should return Contacts", done => {
     request("http://localhost:4000/api/testimonials", (err, res, body) => {
       expect(res.statusCode).to.equal(200);
       done();
     });
   });
 
-  it("Get Request Made From Albums", done => {
+  it("Should return Albums", done => {
     request("http://localhost:4000/api/albums", (err, res, body) => {
       expect(res.statusCode).to.equal(200);
       done();
     });
   });
 
-  it("Get Request That Filters Album Title from A to Z", done => {
+  it("Should return Albums filtered by title from A to Z", done => {
     request("http://localhost:4000/api/namefromatoz", (err, res, body) => {
       expect(res.statusCode).to.equal(200);
       done();
     });
   });
 
-  it("Get Request That Filters Album Title from Z to A", done => {
+  it("Should return Albums filtered by title from Z to A", done => {
     request("http://localhost:4000/api/namefromztoa", (err, res, body) => {
       expect(res.statusCode).to.equal(200);
       done();
     });
   });
 
-  it("Get Request That Filters Album Price from Low to High", done => {
+  it("Should return Albums filtered by price from lowest to highest", done => {
     request("http://localhost:4000/api/pricelowtohigh", (err, res, body) => {
       expect(res.statusCode).to.equal(200);
       done();
     });
   });
 
-  it("Get Request That Filters Album Price from High to Low", done => {
+  it("Should return Albums filtered by price from highest to lowest", done => {
     request("http://localhost:4000/api/pricehightolow", (err, res, body) => {
       expect(res.statusCode).to.equal(200);
       done();
@@ -58,14 +58,14 @@ describe("API Routes Test", () => {
     });
   });
 
-  it("Get Request Made From Contacts", done => {
+  it("Should return Contacts that were added using the POST request", done => {
     request("http://localhost:4000/api/pricehightolow", (err, res, body) => {
       expect(res.statusCode).to.equal(200);
       done();
     });
   });
 
-  it("Get Request Made To Filter Albums In Input", done => {
+  it("Should Return an Album or Albums filtered based on the input value", done => {
     request("http://localhost:4000/api/albums/title/:title", (err, res, body) => {
       expect(res.statusCode).to.equal(200);
       done();
