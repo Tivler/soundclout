@@ -1,5 +1,8 @@
 import React from 'react';
 import './_Footer.scss';
+
+import { Link } from 'react-router-dom';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
@@ -31,7 +34,7 @@ const Footer = () => {
 
             <div className="copyright">
                 <p className="copyright__text">Copyright &copy; 2019 Soundclout.io</p>
-                <p className="copyright__updated">Last updated August, 2019</p>
+                <Link to="/contacts" className="copyright__updated">View our contacts</Link>
             </div>
         </footer>
     </>

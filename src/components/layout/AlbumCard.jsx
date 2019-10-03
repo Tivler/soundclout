@@ -1,6 +1,7 @@
 import React from 'react';
 
 const AlbumCard = ({ id, url, title, artist, price}) => {
+    
     return (
         <>
             <a className={`album__wrapper--link ${id}`} rel="noopener noreferrer" href={`${url}`} target="_blank">
