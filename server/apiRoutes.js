@@ -22,15 +22,8 @@ connection.connect(function(err) {
 });
 
 // API
-router.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, "../public/index.html", (err, data) => {
-      if (err) throw new Error('File not found')
-      else console.log(data);
-  }))
-})
-
-router.get('/api', function (req, res) {
-  res.send("Hello World");
+router.get('/', function (req, res) {
+  res.send("Soundclout Database");
 })
 
 // fetch people for testimonials

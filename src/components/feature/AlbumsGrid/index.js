@@ -59,7 +59,7 @@ class AlbumsGrid extends React.Component {
 
         fetch(`/api/albums/title/${e.target.value}`)
             .then(res => res.json())
-            .then(data => this.setState({products: data}), err=> console.log(err))
+            .then(data => this.setState({products: data}, console.log(data)), err => console.log(err))
     }
 
     _displayAlbums = () => {
