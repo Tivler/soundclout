@@ -16,4 +16,9 @@ Run both applications together with the command:
 
 ### `npm run dev`
 
-The React application will run on port 3000 and the server port 3001.
+The React application will run on port 3000 and the server port 4000.
+
+
+## Soundclout Database
+
+When you clone down this repo navigate to the server folder and copy the contents inside of Schema.txt and paste into your MySQL Workbench or whatever tool you use.
