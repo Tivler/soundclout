@@ -19,7 +19,7 @@ class AlbumsGrid extends React.Component {
         fetch('/api/pricelowtohigh')
             .then(res => res.json())
             .then(albums => this.setState({ products: albums }))
-        console.log('working')
+        console.log('Filtered Price From Low To High')
         window.scrollTo(0,600)
     }
 
@@ -27,7 +27,7 @@ class AlbumsGrid extends React.Component {
         fetch('/api/pricehightolow')
             .then(res => res.json())
             .then(albums => this.setState({ products: albums }))
-        console.log('working')
+        console.log('Filtered Price From High To Low')
         window.scrollTo(0,600)
     }
 
@@ -35,7 +35,7 @@ class AlbumsGrid extends React.Component {
         fetch('/api/namefromatoz')
             .then(res => res.json())
             .then(albums => this.setState({ products: albums }))
-        console.log('working')
+        console.log('Filtered From A to Z')
         window.scrollTo(0,600)
     }
 
@@ -43,7 +43,7 @@ class AlbumsGrid extends React.Component {
         fetch('/api/namefromztoa')
             .then(res => res.json())
             .then(albums => this.setState({ products: albums }))
-        console.log('working')
+        console.log('Filtered From Z to A')
         window.scrollTo(0,600)
     }
 
@@ -59,7 +59,7 @@ class AlbumsGrid extends React.Component {
 
         fetch(`/api/albums/title/${e.target.value}`)
             .then(res => res.json())
-            .then(data => this.setState({products: data}, console.log(data)), err => console.log(err))
+            .then(data => this.setState({products: data}), err => console.log(err))
     }
 
     _displayAlbums = () => {

@@ -33,7 +33,7 @@ class Navbar extends React.Component {
             </div>
 
             <div className="nav__logo--wrapper">
-                <Link to="/" className="nav__logo__text">{this.props.logo}</Link>
+                <Link to="/" className="nav__logo__text"><img className="nav__logo__image" src="/images/logo.png" alt="" />{this.props.logo}</Link>
             </div>
 
             <div className="nav__list--wrapper">

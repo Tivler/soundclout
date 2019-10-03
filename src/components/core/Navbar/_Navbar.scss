@@ -69,8 +69,20 @@
         
         &--wrapper {
             height: 80px;
-            margin-left: 14%;
+            margin-left: 31%;
             display: flex;
+
+            @media only screen and (max-width: 2670px) {
+                margin-left: 26%;
+            }
+
+            @media only screen and (max-width: 2140px) {
+                margin-left: 20%;
+            }
+
+            @media only screen and (max-width: 1725px) {
+                margin-left: 14%;
+            }
         }
 
         &__image {
@@ -95,6 +107,8 @@
             align-self: center;
             z-index: 9;
             transition: .3s;
+            display: flex;
+            align-items: center;
 
             @media only screen and (max-width: 950px) {
                 font-size: 1.7em
@@ -130,7 +144,19 @@
         right: 0;
         height: 80px;
         width: 100%;
-        margin-right: 14%;
+        margin-right: 31%;
+
+        @media only screen and (max-width: 2670px) {
+            margin-right: 26%;
+        }
+
+        @media only screen and (max-width: 2140px) {
+            margin-right: 20%;
+        }
+
+        @media only screen and (max-width: 1725px) {
+            margin-right: 14%;
+        }
 
         @media only screen and (max-width: 950px) {
             left: 0;
