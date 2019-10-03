@@ -4,4 +4,8 @@
     grid-gap: 40px;
     justify-content: center;
     margin: 140px 0;
+
+    @media only screen and (max-width: 950px) {
+        grid-template-columns: 400px;
+    }
 }

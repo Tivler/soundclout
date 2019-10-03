@@ -67,7 +67,7 @@ class NewsletterForm extends React.Component {
         const isValid = this.validate();
         if (isValid) {
             this.newContact(firstName, lastName, email)
-                .then(res => alert(`Thanks for joining our community, ${this.state.firstName}!`))
+                .then(res => alert(`Thanks for joining our community!`))
             this.setState(initialState);
             firstNameClass.style.display = 'none';
             lastNameClass.style.display = 'none';
