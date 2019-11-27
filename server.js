@@ -5,7 +5,6 @@ const pino = require('express-pino-logger')();
 const helmet = require('helmet');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
-const Albums = require("../models/albums.model");
 const uri = process.env.ATLAS_URI;
 const app = express()
 const PORT = process.env.port || 5000
@@ -33,7 +32,7 @@ mongoose.connect(uri, {
 })
 
 
-const router = require('./apiRoutes');
+const router = require('./routes/apiRoutes');
 
 app.use('/api' , router)
 

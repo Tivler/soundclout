@@ -1,24 +1,21 @@
-# Soundclout
+# React App With Node Server
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Then an Express server was added in the server directory. The server is proxied via the proxy key in package.json.
+I have made so many React Apps with Node Servers at this point, I decided to make a reusable template.
 
-## Available Scripts
+## Installation
 
-Run the React application on its own with the command:
+Install dependencies
+```sh
+npm install
+```
 
-### `npm start`
+## Usage
 
-You can start the server on its own with the command:
+Run development server
+```sh
+npm run start
+```
 
-### `npm server`
+## About
 
-Run both applications together with the command:
-
-### `npm run dev`
-
-The React application will run on port 3000 and the server port 4000.
-
-
-## Soundclout Database
-
-When you clone down this repo navigate to the server folder and copy the contents inside of Schema.txt and paste into your MySQL Workbench or whatever tool you use.
+This is a painfully simple app template. It only contains enough code to connect your app and server. The rest is up to your imagination.
