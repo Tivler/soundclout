@@ -18,6 +18,10 @@ app.use(express.json());
 app.use(helmet());
 app.use(morgan());
 
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"));
+}
+
 mongoose.connect(uri, {
   useNewUrlParser: true,
   useCreateIndex: true,
@@ -31,10 +35,13 @@ mongoose.connect(uri, {
   }
 })
 
-
 const router = require('./routes/apiRoutes');
 
 app.use('/api' , router)
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 
 // LAUNCH SERVER
 app.listen(PORT, function () {
