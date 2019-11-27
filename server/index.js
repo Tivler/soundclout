@@ -4,9 +4,11 @@ const bodyParser = require('body-parser');
 const pino = require('express-pino-logger')();
 const helmet = require('helmet');
 const morgan = require('morgan');
-
+const mongoose = require('mongoose');
+const Albums = require("../models/albums.model");
+const uri = process.env.ATLAS_URI;
 const app = express()
-const PORT = process.env.port || 4000
+const PORT = process.env.port || 5000
 
 //INSTANTIATE MIDDLEWARE
 
@@ -17,9 +19,22 @@ app.use(express.json());
 app.use(helmet());
 app.use(morgan());
 
+mongoose.connect(uri, {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useUnifiedTopology: true,
+  database: 'soundclout',
+}, (err) =>{
+  if(err){
+    console.log(err)
+  } else{
+    console.log("database is connected")
+  }
+})
+
+
 const router = require('./apiRoutes');
 
-app.use('/' , router)
 app.use('/api' , router)
 
 // LAUNCH SERVER

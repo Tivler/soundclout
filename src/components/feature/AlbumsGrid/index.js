@@ -16,7 +16,7 @@ class AlbumsGrid extends React.Component {
     }
 
     _filterByLowest = () => {
-        fetch('/api/pricelowtohigh')
+        fetch('/api/albums?sortBy=album_price&sortDir=asc')
             .then(res => res.json())
             .then(albums => this.setState({ products: albums }))
         console.log('Filtered Price From Low To High')
@@ -24,7 +24,7 @@ class AlbumsGrid extends React.Component {
     }
 
     _filterByHighest = () => {
-        fetch('/api/pricehightolow')
+        fetch('/api/albums?sortBy=album_price&sortDir=desc')
             .then(res => res.json())
             .then(albums => this.setState({ products: albums }))
         console.log('Filtered Price From High To Low')
@@ -32,7 +32,7 @@ class AlbumsGrid extends React.Component {
     }
 
     _fitlerAtoZ = () => {
-        fetch('/api/namefromatoz')
+        fetch('/api/albums?sortBy=album_title&sortDir=asc')
             .then(res => res.json())
             .then(albums => this.setState({ products: albums }))
         console.log('Filtered From A to Z')
@@ -40,7 +40,7 @@ class AlbumsGrid extends React.Component {
     }
 
     _fitlerZtoA = () => {
-        fetch('/api/namefromztoa')
+        fetch('/api/albums?sortBy=album_title&sortDir=desc')
             .then(res => res.json())
             .then(albums => this.setState({ products: albums }))
         console.log('Filtered From Z to A')
@@ -89,7 +89,7 @@ class AlbumsGrid extends React.Component {
         
         <div className="album">
             <div className="album__wrapper">
-                {this.state.products.map(p => <AlbumCard id={p.album_class} key={p.album_class}  url={p.album_url} title={p.album_title} artist={p.album_artist} price={p.price}/>)}
+                {this.state.products.map(p => <AlbumCard id={p.album_class} key={p.album_class}  url={p.album_url} title={p.album_title} artist={p.album_artist} price={p.album_price}/>)}
             </div>
 
             <div className="filter">

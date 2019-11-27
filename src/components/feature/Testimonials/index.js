@@ -27,7 +27,7 @@ class Testimonials extends React.Component {
                 />
 
                 <div className="testimonial__wrapper">
-                {this.state.people.map(p => <TestimonialCard key={p.test_id}  url={p.test_url} firstName={p.test_firstName} content={p.test_content} /> )}
+                {this.state.people.map(p => <TestimonialCard key={p._id}  url={p.testimonial_url} firstName={p.testimonial_firstName} content={p.testimonial_content} /> )}
                 </div>
             </>
         )

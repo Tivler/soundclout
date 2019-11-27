@@ -26,7 +26,7 @@ class Contacts extends React.Component {
 
         <>
         <div className="grid">
-            {this.state.contacts.map(p => <ContactCard key={p.contact_id} name={p.firstName} email={p.email}  />)}
+            {this.state.contacts.map(p => <ContactCard key={p._id} name={p.contact_firstName} email={p.contact_email}  />)}
         </div>
         </>
 
