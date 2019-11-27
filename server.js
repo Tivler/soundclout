@@ -16,7 +16,7 @@ app.use(bodyParser.json())
 app.use(pino);
 app.use(express.json());
 app.use(helmet());
-app.use(morgan());
+app.use(morgan('tiny'));
 
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
